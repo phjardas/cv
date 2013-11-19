@@ -2,13 +2,22 @@ body {
   color: black;
   font-family: Calibri, serif;
   font-size: 11pt/16pt;
+    padding-top: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Cambria, sans-serif;
 }
 
-#header {
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+.jumbotron {
   background: none;
   filter: none;
   color: black;
@@ -17,57 +26,19 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
-#header h1 {
+.jumbotron h1 {
   font-size: 2em;
   font-weight: normal;
   letter-spacing: 0;
 }
-#header .lead {
+.jumbotron .lead {
   font-size: 1.4em;
   font-weight: normal;
 }
 
-.sidenav {
-  display: none;
-}
-
-section {
+#content section {
   margin: 0;
   padding: 0;
-}
-
-.page-header {
-  padding: 0;
-  border: none;
-  margin-bottom: 6pt;
-  margin-top: 12pt;
-}
-.page-header h1, h3 {
-  color: black;
-  font-size: 1.4em;
-  font-weight: normal;
-  margin: 0;
-}
-
-.row {
-  margin-left: 0;
-}
-[class*="span"] {
-  display: block;
-  float: none;
-  width: auto !important;
-  margin-left: 0;
-}
-
-#portrait {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0;
-}
-#portrait {
-  width: auto !important;
-  height: auto !important;
 }
 
 .dl-horizontal dt {
@@ -105,7 +76,14 @@ a {
 
 #experience .description { color: black; }
 
-strong {
-  font-weight: normal;
-  font-style: italic;
+.panel, .panel-heading, .panel-body {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.panel-heading {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 1em;
 }
