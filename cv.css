@@ -21,8 +21,9 @@ body {
     padding-bottom: 2em;
 }
 
-.jumbotron a, #languages a, #hobbies a {
+#languages a, #hobbies a {
     color: white;
+    text-decoration: underline;
 }
 
 #education {
