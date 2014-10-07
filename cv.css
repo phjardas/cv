@@ -1,52 +1,51 @@
-body {
-  padding-top: 50px;
+.year {
+	font-weight: bold;
+	color: #666;
 }
 
-.year { font-weight: bold; color: #666; }
-#experience td:first-child { white-space: nowrap; }
-#experience .description { font-size: .9em; color: #666; }
+#experience td:first-child {
+	white-space: nowrap;
+}
+#experience .description {
+	font-size: .9em;
+	color: #666;
+}
 
-
-.jumbotron, #languages, #hobbies {
-    background: #1570a6;
-    color: #eee;
+.jumbotron {
+	background: #1570a6;
+	color: #eee;
 }
 
 .jumbotron h1 {
-    color: white;
+	color: white;
 }
 
 #content section {
-    padding-top: 2em;
-    padding-bottom: 2em;
+	padding-top: 2em;
+	padding-bottom: 2em;
 }
 
-#languages a, #hobbies a {
-    color: white;
-    text-decoration: underline;
-}
-
-#education {
-    background-color: #eee;
+#languages, #hobbies {
+	background: #e5e5e5;
 }
 
 #footer {
-  padding: 70px 0;
-  margin-top: 70px;
-  border-top: 1px solid #e5e5e5;
-  background-color: #eee;
+	padding: 70px 0;
+	margin-top: 70px;
+	border-top: 1px solid #e5e5e5;
+	background-color: #eee;
 }
 
 .dl-horizontal dt,
 .dl-horizontal dd {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 .dl-horizontal dt:first-child {
-  margin-top: 0;
+	margin-top: 0;
 }
 
 .icon {
-  position: relative;
-  top: -2px;
+	position: relative;
+	top: -2px;
 }
 
