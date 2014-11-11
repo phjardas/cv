@@ -20,6 +20,16 @@
 	color: white;
 }
 
+.language {
+	float: right;
+	padding: 10px 15px;
+	background: rgba(255, 255, 255, .2);
+}
+
+.language a {
+	color: white;
+}
+
 #content section {
 	padding-top: 2em;
 	padding-bottom: 2em;
