@@ -1,32 +1,32 @@
-.year {
-	font-weight: bold;
-	color: #666;
-}
-
-#experience td:first-child {
-	white-space: nowrap;
-}
-#experience .description {
-	font-size: .9em;
-	color: #666;
-}
-
 .jumbotron {
-	background: #1570a6;
+	position: relative;
+	background: transparent url(layout.jpg) center right no-repeat;
 	color: #eee;
+}
+@media screen and (min-width: 768px) {
+	.jumbotron {
+		height: 239px;
+		background-size: cover;
+	}
+}
+@media screen and (max-width: 767px) {
+	.jumbotron:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, .3);
+	}
+
+	.jumbotron h1, .jumbotron p {
+		position: relative;
+		z-index: 1;
+	}
 }
 
 .jumbotron h1 {
-	color: white;
-}
-
-.language {
-	float: right;
-	padding: 10px 15px;
-	background: rgba(255, 255, 255, .2);
-}
-
-.language a {
 	color: white;
 }
 
