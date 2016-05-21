@@ -5,7 +5,6 @@
 		<title>Philipp Jardas</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="jqcloud.min.css">
 		<link rel="stylesheet" href="cv.css">
 		<link rel="stylesheet" href="print.css" media="print">
 	</head>
@@ -207,85 +206,7 @@
 			<section id="skills">
 				<div class="container">
 					<h1>Things I like and do well</h1>
-                    <div id="skill-list" class="row">
-                        <div class="col-sm-4">
-                        <ul>
-                            <li class="skill skill-10">Java</li>
-                            <li class="skill skill-9">Scrum</li>
-                            <li class="skill skill-8">Architecture</li>
-                            <li class="skill skill-8">JavaScript</li>
-                            <li class="skill skill-8">node.js</li>
-                            <li class="skill skill-8">ElasticSearch</li>
-                            <li class="skill skill-8">API Design</li>
-                            <li class="skill skill-7">Spark</li>
-                            <li class="skill skill-7">REST</li>
-                        </ul>
-                        </div>
-                        <div class="col-sm-4">
-                        <ul>
-                            <li class="skill skill-6">Hadoop</li>
-                            <li class="skill skill-6">DevOps</li>
-                            <li class="skill skill-6">Docker</li>
-                            <li class="skill skill-6">RabbitMQ</li>
-                            <li class="skill skill-5">XML</li>
-                            <li class="skill skill-5">HBase</li>
-                            <li class="skill skill-5">Kanban</li>
-                            <li class="skill skill-5">Spring Framework</li>
-                            <li class="skill skill-5">MongoDB</li>
-                            <li class="skill skill-5">AngularJS</li>
-                            <li class="skill skill-4">UML</li>
-                            <li class="skill skill-4">HTML5</li>
-                            <li class="skill skill-4">Integration</li>
-                        </ul>
-                        </div>
-                        <div class="col-sm-4">
-                        <ul>
-                            <li class="skill skill-3">CSS</li>
-                            <li class="skill skill-3">Microservices</li>
-                            <li class="skill skill-3">Python</li>
-                            <li class="skill skill-2">CoffeeScript</li>
-                            <li class="skill skill-2">Ansible</li>
-                            <li class="skill skill-2">Eclipse</li>
-                            <li class="skill skill-2">Maven</li>
-                            <li class="skill skill-2">Jenkins</li>
-                            <li class="skill skill-2">Sonar</li>
-                            <li class="skill skill-2">OSGi</li>
-                            <li class="skill skill-2">Eclipse RCP</li>
-                            <li class="skill skill-2">Guice</li>
-                            <li class="skill skill-2">Oracle DB</li>
-                            <li class="skill skill-2">MySQL</li>
-                            <li class="skill skill-1">UX</li>
-                            <li class="skill skill-1">SOA</li>
-                            <li class="skill skill-1">JPA</li>
-                        </ul>
-                        </div>
-                    </div>
-                    <div id="skill-cloud" class="noprint"></div>
-                    
-                    <script src="jquery-1.12.4.min.js"></script>
-                    <script src="jqcloud.min.js"></script>
-                    <script>
-                        var words = $('#skill-list li').map(function() {
-                            var el = $(this);
-                            return {
-                                text: el.text(),
-                                weight: parseInt(el.attr('class').replace(/^skill skill-/, ''))
-                            };
-                        }).toArray();
-                        
-                        $('#skill-cloud').jQCloud(words, {
-                            steps: 10,
-                            autoResize: true,
-                            colors: function(weight) {
-                                var rel = 0.3 + ((weight - 1) / 9) * 0.7;
-                                var components = [ 66, 139, 202 ].map(function(x) { return Math.round(x * rel); });
-                                components.push(rel);
-                                return 'rgba(' + components.join(', ') + ')';
-                            }
-                        });
-                    </script>
-                    
-                    
+                    <img src="skills.svg">
 
 					<h3>Certifications</h3>
 					<ul>

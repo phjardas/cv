@@ -58,17 +58,3 @@
 	position: relative;
 	top: -2px;
 }
-
-#skill-list {
-    display: none;
-}
-.skill-10, .skill-9, .skill-8, .skill-7 {
-    font-weight: bold;
-}
-.skill-3, .skill-2, .skill-1 {
-    font-size: smaller;
-}
-#skill-cloud {
-    width: 100%;
-    height: 400px;
-}
