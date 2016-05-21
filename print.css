@@ -91,3 +91,7 @@ a {
 		font-weight: bold;
 		margin-top: 1em;
 }
+
+#skill-list {
+    display: block;
+}
