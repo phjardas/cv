@@ -1,60 +1,104 @@
-.jumbotron {
-	position: relative;
+* {
+    box-sizing: border-box;
+}
+
+strong {
+    font-weight: 400;
+}
+
+.header-panel {
 	background: transparent url(layout.jpg) center right no-repeat;
-	color: #eee;
-}
-@media screen and (min-width: 768px) {
-	.jumbotron {
-		height: 239px;
-		background-size: cover;
-	}
-}
-@media screen and (max-width: 767px) {
-	.jumbotron:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background-color: rgba(0, 0, 0, .3);
-	}
-
-	.jumbotron h1, .jumbotron p {
-		position: relative;
-		z-index: 1;
-	}
+    height: 193px;
+    position: relative;
+    z-index: 3;
 }
 
-.jumbotron h1 {
-	color: white;
+.header-panel div {
+    position: relative;
+    height: 100%;
 }
 
-#content section {
-	padding-top: 2em;
-	padding-bottom: 2em;
+.header-panel h1 {
+    color: #FFF;
+    position: absolute;
+    bottom: 10px;
+    padding-left: 35px;
 }
 
-#languages, #hobbies {
-	background: #e5e5e5;
+.menu {
+    overflow: auto;
+    padding: 0;
 }
 
-#footer {
-	padding: 70px 0;
-	margin-top: 70px;
-	border-top: 1px solid #e5e5e5;
-	background-color: #eee;
+.menu, .menu * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
-.dl-horizontal dt,
-.dl-horizontal dd {
-	margin-top: 10px;
+.menu ul {
+    padding: 0;
+    margin: 7px 0;
 }
-.dl-horizontal dt:first-child {
-	margin-top: 0;
+
+.menu ul li {
+    list-style: none;
+    padding: 20px 0 20px 50px;
+    font-size: 15px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.menu ul li.active {
+    background-color: #dedede;
+    position: relative;
+}
+
+.menu ul li a {
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+
+.pages {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    padding: 0;
+    overflow: auto;
+}
+
+.pages > div {
+    padding: 0 5px;
+    padding-top: 100px;
+    margin: 0;
+}
+
+.pages .header {
+    color: rgb(82, 101, 162);
+}
+
+.page {
+    transform: translateY(1080px);
+    transition: transform 0 linear;
+    display: none;
+    opacity: 0;
+    font-size: 16px;
+    margin-left: 1em;
+}
+
+.page.active {
+    transform: translateY(0px);
+    transition: all 0.3s ease-out;
+    display: block;
+    opacity: 1;
+}
+
+.more {
+    text-align: right;
 }
 
 .icon {
-	position: relative;
-	top: -2px;
+    width: 1em;
+    height: 1em;
 }
