@@ -25,6 +25,10 @@ strong {
     padding-left: 35px;
 }
 
+.main {
+    position: relative;
+}
+
 .menu {
     overflow: auto;
     padding: 0;
@@ -60,34 +64,27 @@ strong {
 }
 
 .pages {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
+    top: -92px;
     z-index: 4;
-    padding: 0;
+    padding: 0 5% 20px;
     overflow: auto;
 }
 
-.pages > div {
-    padding: 0 5px;
-    padding-top: 100px;
-    margin: 0;
-}
-
-.pages .header {
+.header {
     color: rgb(82, 101, 162);
 }
 
-.page {
+body .pages .page {
+    margin: 0 1em 0 1em;
     transform: translateY(1080px);
     transition: transform 0 linear;
     display: none;
     opacity: 0;
     font-size: 16px;
-    margin-left: 1em;
 }
 
-.page.active {
+body .pages .page.active {
     transform: translateY(0px);
     transition: all 0.3s ease-out;
     display: block;
@@ -101,4 +98,73 @@ strong {
 .icon {
     width: 1em;
     height: 1em;
+}
+
+@media(max-width: 767px) {
+    .header-panel .col-xs-3 {
+        width: 100%;
+    }
+    .header-panel h1 {
+        top: 0;
+        margin-top: 50px;
+        margin-left: 22px;
+    }
+    .menu {
+        position: absolute;
+        top: -92px;
+        z-index: 10;
+        margin: 0;
+        padding: 0 5%;
+        width: 100%;
+    }
+    .menu ul {
+        margin: 0;
+        padding: 0 25px;
+    }
+    .menu ul li {
+        float: left;
+        padding: 15px 20px 10px;
+        text-transform: uppercase;
+        font-size: .9em;
+        border-bottom: 2px solid transparent;
+    }
+    .menu ul li.active {
+        background: transparent;
+        border-bottom-color: green;
+    }
+    .pages {
+        width: 100%;
+    }
+    body .pages .page {
+        padding-top: 50px;
+    }
+    .page .header {
+        display: none;
+    }
+}
+
+@media(max-width: 640px) {
+    body {
+        background-color: white;
+    }
+    .header-panel h1 {
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .menu {
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .menu ul {
+        padding: 0 15px;
+    }
+    .menu ul li {
+        padding: 15px 10px 10px;
+    }
+    .pages {
+        padding: 0;
+    }
+    body .pages .page {
+        margin: 0;
+    }
 }

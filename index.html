@@ -26,200 +26,191 @@
     </div>
     <div class="container-fluid main">
       <div class="row">
-        <nav class="menu col-xs-3">
+        <nav class="menu col-xs-3" id="navbar">
           <ul>
             <li class="withripple" data-target="#about">About Me</li>
             <li class="withripple" data-target="#experience">Work Experience</li>
             <li class="withripple" data-target="#skills">Skills</li>
-            <li class="withripple" data-target="#interests">Hobbies &amp; Interests</li>
+            <li class="withripple" data-target="#interests">Hobbies<span class="hidden-xs hidden-sm">&amp; Interests</span></li>
             <li class="withripple" data-target="#contact">Contact</li>
           </ul>
         </nav>
         <div class="pages col-xs-9">
-          <div class="row">
-            <div class="col-xs-10">
-              <div class="well page" id="about">
-                <h2 class="header">Agile Full-Stack Software Engineer</h2>
-                <hr>
+          <div class="well page" id="about">
+            <h2 class="header">Agile Full-Stack Software Engineer</h2>
 
-                <h3>tl;dr <small class="noprint"><a href="http://www.urbandictionary.com/define.php?term=tl%3Bdr">huh?</a></small></h3>
-                <p>I've been developing software with Java and JavaScript for the last 20+ years.</p>
-                <p>I'm passionate about software startups, agile methodologies, software quality, devops and scalability.</p>
-                <p>I live in a small town near Frankfurt am Main in Germany.</p>
+            <h3>tl;dr <small class="noprint"><a href="http://www.urbandictionary.com/define.php?term=tl%3Bdr">huh?</a></small></h3>
+            <p>I've been developing software with Java and JavaScript for the last 20+ years.</p>
+            <p>I'm passionate about software startups, agile methodologies, software quality, devops and scalability.</p>
+            <p>I live in a small town near Frankfurt am Main in Germany.</p>
 
-                <hr>
-                <p class="more"><button class="btn btn-default withripple" data-target="#experience">Do you want to know more?</button></p>
+            <hr>
+            <p class="more"><button class="btn btn-default withripple" data-target="#experience">Do you want to know more?</button></p>
+          </div>
+
+          <div class="well page" id="experience">
+            <h2 class="header">Work Experience</h2>
+
+            <h3>Education</h3>
+            <p>I grew up in Lörrach and have studied <strong>Information Technology and Electrical Engineering</strong> in Zürich.</p>
+            <p>I graduated as a <strong>Bachelor of Science (ETH)</strong> with a grade of 5.11 out of 6.</p>
+
+            <hr>
+
+            <h3>Senior Software Engineer <small>at</small> bd4travel</h3>
+            <p><small>December 2014 – today in Frankfurt (Main)</small></p>
+            <p><strong>Intelligent personalization for travel.</strong> Award winning start-up providing travel websites around the world with user behavior analytics, personalized recommenders, sorting algorithms and prediction tools.</p>
+            <p>Member of an agile development team with shared responsibilities for all aspects of product development: feature engineering, architecture, databases, backend and frontend development, machine learning, QA, devops, scaling and maintenance.</p>
+            <p><small>Technologies: Java, JavaScript, node.js, ElasticSearch, Hadoop, HBase, Spark, RabbitMQ, MongoDB, AngularJS, Swagger, Docker</small></p>
+
+            <hr>
+
+            <h3>Head of Development <small>at</small> yocondo</h3>
+            <p><small>July 2014 – November 2014 in Düsseldorf and Gründau</small></p>
+            <p><strong>Founding member</strong> of a <strong>start-up</strong> that created a personalized shopping assistant.</p>
+            <p><strong>Architect, software engineer</strong>, leader of a team of two developers and interns, Scrum master.</p>
+            <p><small>Technologies: node.js, CoffeeScript, RabbitMQ, ElasticSearch, WebSockets, MongoDB, AngularJS, Java, Spring Batch, Spring Integration, Tomcat.</small></p>
+            <p><small>Deployment to the Cloud with Vagrant, Puppet, AppFog, Heroku, AWS and Azure.</small></p>
+
+            <hr>
+
+            <h3>Senior Consultant <small>at</small> OPITZ Consulting Deutschland GmbH</h3>
+            <p><small>June <span class="year">2011</span> – June <span class="year">2014</span> in Berlin and Bad Homburg</small></p>
+            <p>
+              <strong>Consultant and software engineer</strong> for the central operations software of
+              <a href="http://www.tntinnight.de/">TNT Innight GmbH</a> 
+              based on Eclipse RCP with a Spring backend.
+              <br>
+              <small>Technologies: Spring, JPA, Hibernate, MyBatis, Oracle Database, Eclipse RCP, OSGi, Activiti, BPMN, Maven, Git.</small>
+            </p>
+            <p>
+              Development of the operational software for <a href="http://www.kombiverkehr.de/">Kombiverkehr</a> (logistics).
+              <br><small>Technologies: Spring, Hibernate, Informix, Eclipse RCP.</small>
+            </p>
+            <p>
+              Member of the <strong>Competence Center Agile Development</strong>: replicator for agile principles, organization of agile retreats und coding dojos.
+            </p>
+
+            <hr>
+
+            <h3>Senior Software Engineer <small>at</small> Schütze Consulting Informationssysteme GmbH</h3>
+            <p><small>July <span class="year">2009</span> – May <span class="year">2011</span> in Berlin</small></p>
+            <p>
+              <strong>Design, architecture and development</strong> of a
+              <a href="http://www.schuetze-consulting.ag/senatsverwaltung/">administrative software for the Berlin administration</a>
+              based on JavaEE.
+              <br>
+              <small>Approx. 800 active users, scope approx. 8000 person days.</small>
+            </p>
+            <p>
+              <strong>Consulting</strong> for the <a href="http://www.itdz.de">IT service center</a> of Berlin.
+            </p>
+            <p>
+              <small> Technologies:
+                JPA, TopLink, Hibernate, Oracle Database, PostgreSQL,
+                Oracle AS, JBoss,
+                Spring, Spring Integration, Spring Batch, Spring WebFlow, Spring Security,
+                Eclipse, Maven, Ant, CVS, SVN
+              </small>
+            </p>
+
+            <hr>
+
+            <h3>Senior Software Engineer <small>at</small> ]init[ AG für digitale Kommunikation</h3>
+            <p><small>October <span class="year">2007</span> – June <span class="year">2009</span> in Berlin</small></p>
+            <p>
+              Concept and development of a <strong>SOA platform</strong> for G2C and G2G communications in <a href="http://www.abudhabi.ae/">Abu Dhabi</a>. <strong>Single sign-on</strong> and identity management.
+              <br><small>Technologies: BEA WebLogic, BEA AquaLogic, BEA Portal, Spring, Beehive, EJB3.</small>
+            </p>
+            <p>
+              <strong>Requirement analysis</strong> and <strong>technical project management</strong> for a <a href="http://www.commio.de/">social network</a> and a <a href="http://www.jobs-io.de/">classifieds portal</a> for the German state department.
+              <br><small>Technologies: Spring MVC, Hibernate, PostgreSQL, JBoss.</small>
+            </p>
+            <p>
+              Technical consulting for the development of
+              <a href="http://www1.osci.de/sixcms/detail.php?gsid=bremen76.c.2817.de">XMeld</a>,
+              the standardized XML format for the communication between German registry offices.
+            </p>
+
+            <hr>
+
+            <h3>Senior Engineer <small>at</small> Schütze Consulting Informationssysteme GmbH</h3>
+            <p><small>January <span class="year">2004</span> – October <span class="year">2007</span> in Berlin</small></p>
+            <p>Development of JavaEE-based web applications for the Berlin administration.</p>
+            <p>Responsible for build and release management, continuous integration and QA.</p>
+            <p>
+              <small>Technologies: Struts, AJAX, Oracle Application Server, JBoss, Spring, EJB2, Oracle DB, Toplink, PostgreSQL, Hibernate, Jasper Reports.</small>
+            </p>
+
+            <hr>
+
+            <h3>Voluntary software development</h3>
+            <p><small>October <span class="year">1999</span> – <span class="year">today</span></small></p>
+            <p>
+              <strong>Registration and management websites</strong> for several non-profit organizations, e.g. <strong>YMCA Europe</strong>, European TEN SING, TEN SING Hessen and our local parish.
+            </p>
+
+            <hr>
+            <p class="more"><button class="btn btn-default withripple" data-target="#skills">Do you want to know more?</button></p>
+          </div>
+
+          <div class="page well" id="skills">
+            <h2 class="header">Things I like and do well</h2>
+
+            <p>Buzzwords: the bigger the better, more often and more successful in productive systems. 😉</p>
+            <img src="skills.svg" style="width: 100%">
+            <p class="noprint"><small><a href="skills.svg">Click for a larger version</a></small></p>
+
+            <h3>Random Chatter</h3>
+            <p>Developing software is fun. Developing well-tested, maintainable, reliable, resilient, well-performing and scalable software is huge fun.</p>
+            <p>I love to have technical discussions of all sorts. It's a great way of getting to know your mates, and you learn new points of view on the way.</p>
+            <p>I try to learn at least one new programming language every year; my last ones were Clojure, Ceylon and TypeScript.</p>
+            <p>Lazyness is one of the most valuable traits of a developer.</p>
+            <p>I want to have tried at least two frameworks or libraries for the same problem. AngularJS and React. Guice and Spring. Undertow and Tomcat. Bootstrap and Material. Java and Python. Because if all you have is a hammer everything looks like a nail.</p>
+            <p>My favorite editors: Eclipse for Java and Sublime for everything else.</p>
+
+            <hr>
+            <p class="more"><button class="btn btn-default withripple" data-target="#interests">Do you want to know more?</button></p>
+          </div>
+
+          <div class="page well" id="interests">
+            <h2 class="header">Hobbies &amp; Interests</h2>
+
+            <p>I am a mentor for the world-wide christian youth movement <a href="http://www.tensing-hessen.de/">TEN SING</a> in Hessen.</p>
+            <p>I passionately play <strong>Ultimate Frisbee</strong> with <a href="http://www.eintracht-frankfurt.de/sportarten/ultimate-frisbee.html">Eintracht Frankfurt</a>.</p>
+            <p>I am the conductor of the youth choir in our local parish.</p>
+            <p>I have been playing the piano and the bass in several bands from <a href="https://soundcloud.com/szanaterria">metal</a> to jazz.</p>
+
+            <hr>
+            <p class="more"><button class="btn btn-default withripple" data-target="#contact">Do you want to know more?</button></p>
+          </div>
+
+          <div class="page well" id="contact">
+            <h2 class="header">Contact Me</h2>
+
+            <div class="row">
+              <div class="col-sm-4">
+                <address>
+                  <strong>Philipp Jardas</strong><br>
+                  Schieferbergstr. 33<br>
+                  63584 Gründau
+                </address>
               </div>
-
-              <div class="well page" id="experience">
-                <h2 class="header">Work Experience</h2>
-                <hr>
-
-                <h3>Education</h3>
-                <p>I grew up in Lörrach and have studied <strong>Information Technology and Electrical Engineering</strong> in Zürich.</p>
-                <p>I graduated as a <strong>Bachelor of Science (ETH)</strong> with a grade of 5.11 out of 6.</p>
-
-                <hr>
-
-                <h3>Senior Software Engineer <small>at</small> bd4travel</h3>
-                <p><small>December 2014 – today in Frankfurt (Main)</small></p>
-                <p><strong>Intelligent personalization for travel.</strong> Award winning start-up providing travel websites around the world with user behavior analytics, personalized recommenders, sorting algorithms and prediction tools.</p>
-                <p>Member of an agile development team with shared responsibilities for all aspects of product development: feature engineering, architecture, databases, backend and frontend development, machine learning, QA, devops, scaling and maintenance.</p>
-                <p><small>Technologies: Java, JavaScript, node.js, ElasticSearch, Hadoop, HBase, Spark, RabbitMQ, MongoDB, AngularJS, Swagger, Docker</small></p>
-
-                <hr>
-
-                <h3>Head of Development <small>at</small> yocondo</h3>
-                <p><small>July 2014 – November 2014 in Düsseldorf and Gründau</small></p>
-                <p><strong>Founding member</strong> of a <strong>start-up</strong> that created a personalized shopping assistant.</p>
-                <p><strong>Architect, software engineer</strong>, leader of a team of two developers and interns, Scrum master.</p>
-                <p><small>Technologies: node.js, CoffeeScript, RabbitMQ, ElasticSearch, WebSockets, MongoDB, AngularJS, Java, Spring Batch, Spring Integration, Tomcat.</small></p>
-                <p><small>Deployment to the Cloud with Vagrant, Puppet, AppFog, Heroku, AWS and Azure.</small></p>
-
-                <hr>
-
-                <h3>Senior Consultant <small>at</small> OPITZ Consulting Deutschland GmbH</h3>
-                <p><small>June <span class="year">2011</span> – June <span class="year">2014</span> in Berlin and Bad Homburg</small></p>
+              <div class="col-sm-4">
                 <p>
-                  <strong>Consultant and software engineer</strong> for the central operations software of
-                  <a href="http://www.tntinnight.de/">TNT Innight GmbH</a> 
-                  based on Eclipse RCP with a Spring backend.
+                  <a href="tel:+4917623166442">📞 +49 (176) 23166442</a>
                   <br>
-                  <small>Technologies: Spring, JPA, Hibernate, MyBatis, Oracle Database, Eclipse RCP, OSGi, Activiti, BPMN, Maven, Git.</small>
+                  <a href="mailto:philipp@jardas.de">📧 philipp@jardas.de</a>
                 </p>
-                <p>
-                  Development of the operational software for <a href="http://www.kombiverkehr.de/">Kombiverkehr</a> (logistics).
-                  <br><small>Technologies: Spring, Hibernate, Informix, Eclipse RCP.</small>
-                </p>
-                <p>
-                  Member of the <strong>Competence Center Agile Development</strong>: replicator for agile principles, organization of agile retreats und coding dojos.
-                </p>
-
-                <hr>
-
-                <h3>Senior Software Engineer <small>at</small> Schütze Consulting Informationssysteme GmbH</h3>
-                <p><small>July <span class="year">2009</span> – May <span class="year">2011</span> in Berlin</small></p>
-                <p>
-                  <strong>Design, architecture and development</strong> of a
-                  <a href="http://www.schuetze-consulting.ag/senatsverwaltung/">administrative software for the Berlin administration</a>
-                  based on JavaEE.
-                  <br>
-                  <small>Approx. 800 active users, scope approx. 8000 person days.</small>
-                </p>
-                <p>
-                  <strong>Consulting</strong> for the <a href="http://www.itdz.de">IT service center</a> of Berlin.
-                </p>
-                <p>
-                  <small> Technologies:
-                    JPA, TopLink, Hibernate, Oracle Database, PostgreSQL,
-                    Oracle AS, JBoss,
-                    Spring, Spring Integration, Spring Batch, Spring WebFlow, Spring Security,
-                    Eclipse, Maven, Ant, CVS, SVN
-                  </small>
-                </p>
-
-                <hr>
-
-                <h3>Senior Software Engineer <small>at</small> ]init[ AG für digitale Kommunikation</h3>
-                <p><small>October <span class="year">2007</span> – June <span class="year">2009</span> in Berlin</small></p>
-                <p>
-                  Concept and development of a <strong>SOA platform</strong> for G2C and G2G communications in <a href="http://www.abudhabi.ae/">Abu Dhabi</a>. <strong>Single sign-on</strong> and identity management.
-                  <br><small>Technologies: BEA WebLogic, BEA AquaLogic, BEA Portal, Spring, Beehive, EJB3.</small>
-                </p>
-                <p>
-                  <strong>Requirement analysis</strong> and <strong>technical project management</strong> for a <a href="http://www.commio.de/">social network</a> and a <a href="http://www.jobs-io.de/">classifieds portal</a> for the German state department.
-                  <br><small>Technologies: Spring MVC, Hibernate, PostgreSQL, JBoss.</small>
-                </p>
-                <p>
-                  Technical consulting for the development of
-                  <a href="http://www1.osci.de/sixcms/detail.php?gsid=bremen76.c.2817.de">XMeld</a>,
-                  the standardized XML format for the communication between German registry offices.
-                </p>
-
-                <hr>
-
-                <h3>Senior Engineer <small>at</small> Schütze Consulting Informationssysteme GmbH</h3>
-                <p><small>January <span class="year">2004</span> – October <span class="year">2007</span> in Berlin</small></p>
-                <p>Development of JavaEE-based web applications for the Berlin administration.</p>
-                <p>Responsible for build and release management, continuous integration and QA.</p>
-                <p>
-                  <small>Technologies: Struts, AJAX, Oracle Application Server, JBoss, Spring, EJB2, Oracle DB, Toplink, PostgreSQL, Hibernate, Jasper Reports.</small>
-                </p>
-
-                <hr>
-
-                <h3>Voluntary software development</h3>
-                <p><small>October <span class="year">1999</span> – <span class="year">today</span></small></p>
-                <p>
-                  <strong>Registration and management websites</strong> for several non-profit organizations, e.g. <strong>YMCA Europe</strong>, European TEN SING, TEN SING Hessen and our local parish.
-                </p>
-
-                <hr>
-                <p class="more"><button class="btn btn-default withripple" data-target="#skills">Do you want to know more?</button></p>
               </div>
-
-              <div class="page well" id="skills">
-                <h2 class="header">Things I like and do well</h2>
-                <hr>
-
-                <p>Buzzwords: the bigger the better, more often and more successful in productive systems. 😉</p>
-                <img src="skills.svg" style="width: 100%">
-                <p class="noprint"><small><a href="skills.svg">Click for a larger version</a></small></p>
-
-                <h3>Random Chatter</h3>
-                <p>Developing software is fun. Developing well-tested, maintainable, reliable, resilient, well-performing and scalable software is huge fun.</p>
-                <p>I love to have technical discussions of all sorts. It's a great way of getting to know your mates, and you learn new points of view on the way.</p>
-                <p>I try to learn at least one new programming language every year; my last ones were Clojure, Ceylon and TypeScript.</p>
-                <p>Lazyness is one of the most valuable traits of a developer.</p>
-                <p>I want to have tried at least two frameworks or libraries for the same problem. AngularJS and React. Guice and Spring. Undertow and Tomcat. Bootstrap and Material. Java and Python. Because if all you have is a hammer everything looks like a nail.</p>
-                <p>My favorite editors: Eclipse for Java and Sublime for everything else.</p>
-
-                <hr>
-                <p class="more"><button class="btn btn-default withripple" data-target="#interests">Do you want to know more?</button></p>
-              </div>
-
-              <div class="page well" id="interests">
-                <h2 class="header">Hobbies &amp; Interests</h2>
-                <hr>
-
-                <p>I am a mentor for the world-wide christian youth movement <a href="http://www.tensing-hessen.de/">TEN SING</a> in Hessen.</p>
-                <p>I passionately play <strong>Ultimate Frisbee</strong> with <a href="http://www.eintracht-frankfurt.de/sportarten/ultimate-frisbee.html">Eintracht Frankfurt</a>.</p>
-                <p>I am the conductor of the youth choir in our local parish.</p>
-                <p>I have been playing the piano and the bass in several bands from <a href="https://soundcloud.com/szanaterria">metal</a> to jazz.</p>
-
-                <hr>
-                <p class="more"><button class="btn btn-default withripple" data-target="#contact">Do you want to know more?</button></p>
-              </div>
-
-              <div class="page well" id="contact">
-                <h2 class="header">Contact Me</h2>
-                <hr>
-
-                <div class="row">
-                  <div class="col-xs-4">
-                    <address>
-                      <strong>Philipp Jardas</strong><br>
-                      Schieferbergstr. 33<br>
-                      63584 Gründau
-                    </address>
-                  </div>
-                  <div class="col-xs-4">
-                    <p>
-                      <a href="tel:+4917623166442">📞 +49 (176) 23166442</a>
-                      <br>
-                      <a href="mailto:philipp@jardas.de">📧 philipp@jardas.de</a>
-                    </p>
-                  </div>
-                  <div class="col-xs-4">
-                    <a href="https://www.xing.com/profile/Philipp_Jardas"><img src="XING.svg" class="icon"> XING</a>
-                    <br>
-                    <a href="http://de.linkedin.com/in/philippjardas"><img src="LinkedIn.svg" class="icon"> LinkedIn</a>
-                    <br>
-                    <a href="https://github.com/phjardas"><img src="GitHub.svg" class="icon"> GitHub</a>
-                    <br>
-                    <a href="http://stackoverflow.com/users/469029/philipp-jardas"><img src="stackoverflow.svg" class="icon"> Stack Overflow</a>
-                  </div>
-                </div>
+              <div class="col-sm-4">
+                <a href="https://www.xing.com/profile/Philipp_Jardas"><img src="XING.svg" class="icon"> XING</a>
+                <br>
+                <a href="http://de.linkedin.com/in/philippjardas"><img src="LinkedIn.svg" class="icon"> LinkedIn</a>
+                <br>
+                <a href="https://github.com/phjardas"><img src="GitHub.svg" class="icon"> GitHub</a>
+                <br>
+                <a href="http://stackoverflow.com/users/469029/philipp-jardas"><img src="stackoverflow.svg" class="icon"> Stack Overflow</a>
               </div>
             </div>
           </div>
