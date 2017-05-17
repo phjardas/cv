@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = env => {
   const production = env === 'production' || process.env.NODE_ENV === 'production';
-  const devtool = production ? 'source-map' : 'eval-source-map';
+  const devtool = 'source-map';
   const dist = path.resolve(__dirname, 'dist');
 
   const extractSass = new ExtractTextPlugin({
@@ -54,7 +54,7 @@ module.exports = env => {
         // FIXME make eslint work! { test: /\.jsx?$/, include: path.resolve(__dirname, 'src'), loader: 'eslint-loader', enforce: 'pre' },
         { test: /\.jsx?$/, include: path.resolve(__dirname, 'src'), loader: 'babel-loader', query: {
           presets: ['es2015', 'stage-0', 'react'],
-          plugins: ['transform-runtime']
+          plugins: ['transform-runtime', 'transform-decorators-legacy']
         }},
         { test: /\.s?css$/, loader: extractSass.extract({ use: [{ loader: 'css-loader' }, { loader: 'sass-loader' }], fallback: 'style-loader' })},
         { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff' },
