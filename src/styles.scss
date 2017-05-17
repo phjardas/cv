@@ -1,0 +1,21 @@
+@import "~bourbon/app/assets/stylesheets/bourbon";
+
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$brand-primary: #009687;
+$navbar-default-bg: #009687;
+$navbar-default-color: #ffffff;
+$navbar-border-radius: 0;
+$navbar-default-link-color: $navbar-default-color;
+$navbar-default-link-active-color: $navbar-default-link-color;
+
+$font-family-monospace: Hack, Menlo, Monaco, Consolas, "Courier New", monospace;
+
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+.navbar {
+  border: none;
+  border-bottom: 1px solid $navbar-default-border;
+}
+.navbar-brand {
+  font-family: $font-family-serif;
+}
