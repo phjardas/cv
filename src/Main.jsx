@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Alert, Button, Navbar } from 'react-bootstrap';
+import { Alert, Button, Glyphicon, MenuItem, Nav, Navbar, NavDropdown, NavItem } from 'react-bootstrap';
 import { IndexLink } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -14,7 +14,7 @@ export default class Main extends Component {
     const { children, auth, logout } = this.props;
 
     return <main>
-      <Navbar collapseOnSelect>
+      <Navbar collapseOnSelect fixedTop>
         <Navbar.Header>
           <Navbar.Brand>
             <IndexLink to="/" className="navbar-brand">Philipp Jardas</IndexLink>
@@ -23,10 +23,13 @@ export default class Main extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <MainMenu />
+          <Nav pullRight>
+            <NavDropdown title={<span><Glyphicon glyph='user' /> {auth.user.displayName}</span>} id='menu-user'>
+              <MenuItem onClick={logout}>Sign out</MenuItem>
+            </NavDropdown>
+          </Nav>
         </Navbar.Collapse>
       </Navbar>
-
-      <p>Logged in as {auth.user.displayName}. <Button bsStyle='default' onClick={logout}>Log out</Button></p>
 
       <div className="container">
         <PageTransition>

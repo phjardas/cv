@@ -12,6 +12,10 @@ $font-family-monospace: Hack, Menlo, Monaco, Consolas, "Courier New", monospace;
 
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
+body {
+  padding-top: 60px;
+}
+
 .navbar {
   border: none;
   border-bottom: 1px solid $navbar-default-border;
