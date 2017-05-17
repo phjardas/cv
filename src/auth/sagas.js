@@ -25,6 +25,9 @@ function* createAuthChanges() {
   while (true) {
     const user = yield call(channel.take);
     yield put({ type: 'auth.update', payload: { user }});
+    if (user) {
+      yield put({ type: 'content.load' });
+    }
   }
 }
 

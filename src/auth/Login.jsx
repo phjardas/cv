@@ -15,7 +15,7 @@ export default class Authentication extends Component {
 
   render() {
     return <div className="container">
-      <Jumbotron style={{ 'margin-top': '50px' }}>
+      <Jumbotron style={{ marginTop: '50px' }}>
         <h1>Welcome!</h1>
         <div>
           <GoogleButton onClick={this.login.bind(this, 'google')} />
