@@ -3,6 +3,7 @@ import { Alert, Button, Navbar } from 'react-bootstrap';
 import { IndexLink } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import PageTransition from 'react-router-page-transition';
 
 import { actions as authActions } from './auth';
 import MainMenu from './MainMenu';
@@ -28,7 +29,9 @@ export default class Main extends Component {
       <p>Logged in as {auth.user.displayName}. <Button bsStyle='default' onClick={logout}>Log out</Button></p>
 
       <div className="container">
-        {children}
+        <PageTransition>
+          {children}
+        </PageTransition>
       </div>
     </main>;
   }

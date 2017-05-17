@@ -4066,6 +4066,10 @@ promise-polyfill@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/promise-polyfill/-/promise-polyfill-6.0.2.tgz#d9c86d3dc4dc2df9016e88946defd69b49b41162"
 
+promise-queue@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/promise-queue/-/promise-queue-2.2.3.tgz#8534d76bf4673c3baa3a82bba01bd295cc30f14f"
+
 promise@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/promise/-/promise-7.1.1.tgz#489654c692616b8aa55b0724fa809bb7db49c5bf"
@@ -4230,6 +4234,12 @@ react-router-bootstrap@rr-v3:
   resolved "https://registry.yarnpkg.com/react-router-bootstrap/-/react-router-bootstrap-0.23.3.tgz#970c35c53c04c61fb6b110d4ff651a7e8a73b2ba"
   dependencies:
     prop-types "^15.5.8"
+
+react-router-page-transition@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/react-router-page-transition/-/react-router-page-transition-3.0.2.tgz#bc769458fa20659b5f86313014d83266bf089e2b"
+  dependencies:
+    promise-queue "^2.2.3"
 
 react-router-redux@^4.0.8:
   version "4.0.8"

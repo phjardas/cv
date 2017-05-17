@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Alert } from 'react-bootstrap';
 
 
-@connect(({ content }) => ({ content: content.content }))
+@connect(({ content }) => ({ content: content.content }), () => ({}), undefined, { withRef: true })
 export default class Content extends Component {
   render() {
     const lang = 'en';
@@ -16,7 +16,7 @@ export default class Content extends Component {
 
     const data = content[section][lang];
 
-    return <div>
+    return <div className='transition-item'>
       <h1>{ data.title }</h1>
       <div dangerouslySetInnerHTML={{ __html: data.content }}  />
     </div>;
