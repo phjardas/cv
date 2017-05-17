@@ -1,0 +1,8 @@
+{
+  "content": {
+    "home": {
+      "de": "<div class=\"jumbotron\"><h2>Willkommen!</h2></div>",
+      "en": "<div class=\"jumbotron\"><h2>Welcome!</h2></div>"
+    }
+  }
+}
