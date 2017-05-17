@@ -1,8 +1,53 @@
 {
   "content": {
+    "education": {
+      "en": {
+        "title": "Education",
+        "content": "<p>I grew up in Lörrach and have studied <strong>Information Technology and Electrical Engineering</strong> in Zürich.</p>\n<p>I graduated as a <strong>Bachelor of Science (ETH)</strong> with a grade of 5.11 out of 6.</p>\n"
+      }
+    },
+    "experience": {
+      "en": {
+        "title": "Work Experience",
+        "content": "<h3>Senior Software Engineer <small>at</small> bd4travel</h3>\n<p><small>December 2014 – today in Frankfurt (Main)</small></p>\n<p><strong>Intelligent personalization for travel.</strong> Award winning start-up providing travel websites around the world with user behavior analytics, personalized recommenders, sorting algorithms and prediction tools.</p>\n<p>Member of an agile development team with shared responsibilities for all aspects of product development: feature engineering, architecture, databases, backend and frontend development, machine learning, QA, devops, scaling and maintenance.</p>\n<p><small>Technologies: Java, JavaScript, node.js, ElasticSearch, Hadoop, HBase, Spark, RabbitMQ, MongoDB, AngularJS, Swagger, Docker</small></p>\n<hr>\n<h3>Head of Development <small>at</small> yocondo</h3>\n<p><small>July 2014 – November 2014 in Düsseldorf and Gründau</small></p>\n<p><strong>Founding member</strong> of a <strong>start-up</strong> that created a personalized shopping assistant.</p>\n<p><strong>Architect, software engineer</strong>, leader of a team of two developers and interns, Scrum master.</p>\n<p><small>Technologies: node.js, CoffeeScript, RabbitMQ, ElasticSearch, WebSockets, MongoDB, AngularJS, Java, Spring Batch, Spring Integration, Tomcat.</small></p>\n<p><small>Deployment to the Cloud with Vagrant, Puppet, AppFog, Heroku, AWS and Azure.</small></p>\n<hr>\n<h3>Senior Consultant <small>at</small> OPITZ Consulting Deutschland GmbH</h3>\n<p><small>June <span class=\"year\">2011</span> – June <span class=\"year\">2014</span> in Berlin and Bad Homburg</small></p>\n<p>\n  <strong>Consultant and software engineer</strong> for the central operations software of\n  <a href=\"http://www.tntinnight.de/\">TNT Innight GmbH</a> \n  based on Eclipse RCP with a Spring backend.\n  <br>\n  <small>Technologies: Spring, JPA, Hibernate, MyBatis, Oracle Database, Eclipse RCP, OSGi, Activiti, BPMN, Maven, Git.</small>\n</p>\n<p>\n  Development of the operational software for <a href=\"http://www.kombiverkehr.de/\">Kombiverkehr</a> (logistics).\n  <br><small>Technologies: Spring, Hibernate, Informix, Eclipse RCP.</small>\n</p>\n<p>\n  Member of the <strong>Competence Center Agile Development</strong>: replicator for agile principles, organization of agile retreats und coding dojos.\n</p>\n<hr>\n<h3>Senior Software Engineer <small>at</small> Schütze Consulting Informationssysteme GmbH</h3>\n<p><small>July <span class=\"year\">2009</span> – May <span class=\"year\">2011</span> in Berlin</small></p>\n<p>\n  <strong>Design, architecture and development</strong> of a\n  <a href=\"http://www.schuetze-consulting.ag/senatsverwaltung/\">administrative software for the Berlin administration</a>\n  based on JavaEE.\n  <br>\n  <small>Approx. 800 active users, scope approx. 8000 person days.</small>\n</p>\n<p>\n  <strong>Consulting</strong> for the <a href=\"http://www.itdz.de\">IT service center</a> of Berlin.\n</p>\n<p>\n  <small> Technologies:\n    JPA, TopLink, Hibernate, Oracle Database, PostgreSQL,\n    Oracle AS, JBoss,\n    Spring, Spring Integration, Spring Batch, Spring WebFlow, Spring Security,\n    Eclipse, Maven, Ant, CVS, SVN\n  </small>\n</p>\n<hr>\n<h3>Senior Software Engineer <small>at</small> ]init[ AG für digitale Kommunikation</h3>\n<p><small>October <span class=\"year\">2007</span> – June <span class=\"year\">2009</span> in Berlin</small></p>\n<p>\n  Concept and development of a <strong>SOA platform</strong> for G2C and G2G communications in <a href=\"http://www.abudhabi.ae/\">Abu Dhabi</a>. <strong>Single sign-on</strong> and identity management.\n  <br><small>Technologies: BEA WebLogic, BEA AquaLogic, BEA Portal, Spring, Beehive, EJB3.</small>\n</p>\n<p>\n  <strong>Requirement analysis</strong> and <strong>technical project management</strong> for a <a href=\"http://www.commio.de/\">social network</a> and a <a href=\"http://www.jobs-io.de/\">classifieds portal</a> for the German state department.\n  <br><small>Technologies: Spring MVC, Hibernate, PostgreSQL, JBoss.</small>\n</p>\n<p>\n  Technical consulting for the development of\n  <a href=\"http://www1.osci.de/sixcms/detail.php?gsid=bremen76.c.2817.de\">XMeld</a>,\n  the standardized XML format for the communication between German registry offices.\n</p>\n<hr>\n<h3>Senior Engineer <small>at</small> Schütze Consulting Informationssysteme GmbH</h3>\n<p><small>January <span class=\"year\">2004</span> – October <span class=\"year\">2007</span> in Berlin</small></p>\n<p>Development of JavaEE-based web applications for the Berlin administration.</p>\n<p>Responsible for build and release management, continuous integration and QA.</p>\n<p>\n  <small>Technologies: Struts, AJAX, Oracle Application Server, JBoss, Spring, EJB2, Oracle DB, Toplink, PostgreSQL, Hibernate, Jasper Reports.</small>\n</p>\n<hr>\n<h3>Voluntary software development</h3>\n<p><small>October <span class=\"year\">1999</span> – <span class=\"year\">today</span></small></p>\n<p>\n  <strong>Registration and management websites</strong> for several non-profit organizations, e.g. <strong>YMCA Europe</strong>, European TEN SING, TEN SING Hessen and our local parish.\n</p>\n"
+      }
+    },
     "home": {
-      "de": "<div class=\"jumbotron\"><h2>Willkommen!</h2></div>",
-      "en": "<div class=\"jumbotron\"><h2>Welcome!</h2></div>"
+      "en": {
+        "title": "Agile Full-Stack Software Engineer",
+        "content": "<h3>tl;dr <small class=\"noprint\"><a href=\"http://www.urbandictionary.com/define.php?term=tl%3Bdr\">huh?</a></small></h3>\n<p>I've been developing software with Java and JavaScript for the last 20+ years.</p>\n<p>I'm passionate about software startups, agile methodologies, software quality, devops and scalability.</p>\n<p>I live in a small town near Frankfurt am Main in Germany.</p>\n"
+      }
+    },
+    "languages": {
+      "en": {
+        "title": "Languages",
+        "content": "<p>My native tongue is <strong>German</strong> and I speak and write <strong>English</strong> fluently.</p>\n"
+      }
     }
+  },
+  "menu": {
+    "items": [
+      {
+        "path": "/home",
+        "label": {
+          "en": "Home",
+          "de": "Startseite"
+        }
+      },
+      {
+        "path": "/education",
+        "label": {
+          "en": "Education",
+          "de": "Ausbildung"
+        }
+      },
+      {
+        "path": "/experience",
+        "label": {
+          "en": "Work Experience",
+          "de": "Arbeitserfahrung"
+        }
+      }
+    ]
   }
 }

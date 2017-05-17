@@ -10,6 +10,7 @@
   },
   "license": "UNLICENSED",
   "devDependencies": {
+    "async": "^2.4.0",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
