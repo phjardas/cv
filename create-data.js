@@ -33,13 +33,7 @@ function createContent(next) {
     async.map(files, parseFile, err => {
       if (err) return next(err);
       const data = { content };
-
-      fs.readFile(path.resolve(contentDir, 'menu.json'), 'utf-8', (err, menu) => {
-        if (err) return next(err);
-        data.menu = JSON.parse(menu);
-
-        fs.writeFile(path.resolve(__dirname, 'data.json'), JSON.stringify(data, null, 2), 'utf8', next);
-      });
+      fs.writeFile(path.resolve(__dirname, 'data.json'), JSON.stringify(data, null, 2), 'utf8', next);
     });
   });
 }

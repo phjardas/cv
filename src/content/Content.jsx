@@ -6,7 +6,9 @@ import { Alert } from 'react-bootstrap';
 @connect(({ content }) => ({ content: content.content }))
 export default class Content extends Component {
   render() {
-    const { section, lang, content } = this.props;
+    const lang = 'en';
+    const { location, content } = this.props;
+    const section = location.pathname.substring(1);
 
     if (!content || !(section in content)) {
       return <Alert bsStyle='info'>Loading…</Alert>;
