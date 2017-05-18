@@ -1,170 +1,208 @@
-* {
-    box-sizing: border-box;
+/* @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Condensed:300,400'); */
+
+body {
+  font-family: Roboto, sans-serif;
+  background: #bdbdbd;
+  color: #212121;
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
-strong {
-    font-weight: 400;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 300;
 }
 
-.header-panel {
-	background: transparent url(layout.jpg) center right no-repeat;
-    height: 193px;
-    position: relative;
-    z-index: 3;
+.page {
+  margin: 50px;
+  background: white;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, .3);
 }
 
-.header-panel div {
-    position: relative;
-    height: 100%;
+.page-header {
+  background: #512DA8;
+  color: #fff;
+  padding: 80px 25px 80px 40%;
+  position: relative;
 }
 
-.header-panel h1 {
-    color: #FFF;
-    position: absolute;
-    bottom: 10px;
-    padding-left: 35px;
+.title {
+  margin: 0;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-weight: 300;
+  color: #ccc;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+.floating-action {
+  position: absolute;
+  bottom: -28px;
+  right: 24px;
+  font-size: 24px;
+  width: 56px;
+  height: 41px;
+  border-radius: 100%;
+  background: #7c4dff;
+  color: #fff;
+  text-align: center;
+  padding-top: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+  transition: all 200ms ease;
+}
+.floating-action:hover {
+  bottom: -27px;
+  box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.23), -3px 6px 15px rgba(0, 0, 0, 0.16);
 }
 
 .main {
-    position: relative;
+  padding-right: 50px;
+  float: right;
+  width: calc(60% - 50px);
+}
+.main::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
-.menu {
-    overflow: auto;
-    padding: 0;
+.aside {
+  float: left;
+  width: calc(40% - 100px);
+  padding: 0 50px;
+  text-align: right;
 }
 
-.menu, .menu * {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+.page-footer {
+  clear: both;
+  padding: 80px 0 50px 40%;
+}
+.page-footer::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
-.menu ul {
-    padding: 0;
-    margin: 7px 0;
+.page-footer a {
+  color: #212121;
 }
 
-.menu ul li {
-    list-style: none;
-    padding: 20px 0 20px 50px;
-    font-size: 15px;
-    font-weight: normal;
-    cursor: pointer;
+.footer-address, .footer-contact, .footer-profiles {
+  float: left;
+  width: 33%;
 }
 
-.menu ul li.active {
-    background-color: #dedede;
-    position: relative;
-}
-
-.menu ul li a {
-    color: rgb(51, 51, 51);
-    text-decoration: none;
-}
-
-.pages {
-    position: relative;
-    top: -92px;
-    z-index: 4;
-    padding: 0 5% 20px;
-    overflow: auto;
-}
-
-.header {
-    color: rgb(82, 101, 162);
-}
-
-body .pages .page {
-    margin: 0 1em 0 1em;
-    transform: translateY(1080px);
-    transition: transform 0 linear;
-    display: none;
-    opacity: 0;
-    font-size: 16px;
-}
-
-body .pages .page.active {
-    transform: translateY(0px);
-    transition: all 0.3s ease-out;
-    display: block;
-    opacity: 1;
-}
-
-.more {
-    text-align: right;
+.material-icons {
+  font-size: inherit;
 }
 
 .icon {
-    width: 1em;
-    height: 1em;
+  width: 14px;
+  height: 14px;
 }
 
-@media(max-width: 767px) {
-    .header-panel .col-xs-3 {
-        width: 100%;
-    }
-    .header-panel h1 {
-        top: 0;
-        margin-top: 50px;
-        margin-left: 22px;
-    }
-    .menu {
-        position: absolute;
-        top: -92px;
-        z-index: 10;
-        margin: 0;
-        padding: 0 5%;
-        width: 100%;
-    }
-    .menu ul {
-        margin: 0;
-        padding: 0 25px;
-    }
-    .menu ul li {
-        float: left;
-        padding: 15px 20px 10px;
-        text-transform: uppercase;
-        font-size: .9em;
-        border-bottom: 2px solid transparent;
-    }
-    .menu ul li.active {
-        background: transparent;
-        border-bottom-color: green;
-    }
-    .pages {
-        width: 100%;
-    }
-    body .pages .page {
-        padding-top: 50px;
-    }
-    .page .header {
-        display: none;
-    }
+a {
+  color: #673AB7;
+  text-decoration: none;
 }
 
-@media(max-width: 640px) {
-    body {
-        background-color: white;
-    }
-    .header-panel h1 {
-        margin-left: 0;
-        padding-left: 0;
-    }
-    .menu {
-        margin-left: 0;
-        padding-left: 0;
-    }
-    .menu ul {
-        padding: 0 15px;
-    }
-    .menu ul li {
-        padding: 15px 10px 10px;
-    }
-    .pages {
-        padding: 0;
-    }
-    body .pages .page {
-        margin: 0;
-    }
+h2 {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+strong {
+  font-weight: 500;
+}
+
+small {
+  color: #757575;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 900px) {
+  .page {
+    margin: 25px;
+  }
+
+  .page-header {
+    padding: 50px;
+  }
+
+  .page-footer {
+    padding: 50px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .page {
+    margin: 0;
+  }
+
+  .aside, .main {
+    float: none;
+    text-align: left;
+    width: auto;
+    padding: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .title {
+    font-size: 9.5vw;
+  }
+
+  .subtitle {
+    font-size: 4.7vw;
+  }
+
+  .page-header, .page-footer {
+    padding: 10vw;
+  }
+
+  .aside, .main {
+    padding: 0 10vw;
+  }
+
+  h2 {
+    margin-top: 10vw;
+    margin-bottom: 5vw;
+  }
+
+  h3 {
+    margin-top: 5vw;
+  }
+
+  p {
+    margin-bottom: 2vw;
+  }
+
+  .footer-address, .footer-contact, .footer-profiles {
+    float: none;
+    width: auto;
+    margin-bottom: 5vw;
+  }
 }
