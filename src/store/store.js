@@ -10,23 +10,27 @@ import sagas from '../sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 
-const logger = createLogger({
-  predicate: (getState, { type }) => !type.startsWith('@@'),
-});
-
-const middewares = [
+const middlewares = [
   reduxImmutableStateInvariant(),
   sagaMiddleware,
   routerMiddleware(browserHistory),
-  logger,
+  createLogger({
+    predicate: (getState, { type }) => !type.startsWith('@@'),
+  }),
 ];
+
+const initialState = {
+  i18n: {
+    language: 'en'
+  }
+};
 
 const store = createStore(
   reducer,
+  initialState,
   compose(
-    applyMiddleware(...middewares),
-     // add support for Redux dev tools
-     window.devToolsExtension ? window.devToolsExtension() : f => f
+    applyMiddleware(...middlewares),
+    window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 );
 
