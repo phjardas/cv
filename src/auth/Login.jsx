@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button, Jumbotron } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import GoogleButton from 'react-google-button';
@@ -14,13 +13,10 @@ export default class Authentication extends Component {
   }
 
   render() {
-    return <div className="container">
-      <Jumbotron style={{ marginTop: '50px' }}>
-        <h1>Philipp Jardas<br /><small>Agile Full-Stack Software Engineer</small></h1>
-        <div>
-          <GoogleButton onClick={this.login.bind(this, 'google')} />
-        </div>
-      </Jumbotron>
+    return <div className="login">
+      <h2>Thank you for your interest in my CV</h2>
+      <p>To continue, please register with one of the options below.</p>
+      <GoogleButton onClick={this.login.bind(this, 'google')} />
     </div>;
   }
 }

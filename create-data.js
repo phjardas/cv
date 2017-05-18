@@ -17,12 +17,8 @@ function createContent(next) {
         const language = match[2];
         fs.readFile(path.resolve(contentDir, file), 'utf-8', (err, data) => {
           if (err) return next(err);
-          const lines = data.split(/\n+/);
           content[section] = content[section] || {};
-          content[section][language] = {
-            title: lines.shift().replace(/^\<h2\>(.*)\<\/h2\>$/, '$1'),
-            content: lines.join('\n'),
-          };
+          content[section][language] = data;
           next();
         });
       } else {
