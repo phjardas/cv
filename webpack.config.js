@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = env => {
   const production = env === 'production' || process.env.NODE_ENV === 'production';
-  const devtool = 'source-map';
+  const devtool = production ? 'source-map' : 'eval-source-map';
   const dist = path.resolve(__dirname, 'dist');
 
   const extractSass = new ExtractTextPlugin({
