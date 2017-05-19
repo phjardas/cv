@@ -14,7 +14,7 @@ const middlewares = [
 
 const initialState = {
   i18n: {
-    language: 'en'
+    language: localStorage.getItem('language') || 'en',
   }
 };
 

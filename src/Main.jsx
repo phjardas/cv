@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { actions as authActions } from './auth';
-import { actions as i18nActions } from './i18n';
 
 import Content from './content/Content';
 
@@ -14,18 +13,13 @@ import stackoverflowIcon from './img/stackoverflow.svg';
 
 @connect(
   ({ auth, i18n }) => ({ auth, i18n }),
-  dispatch => bindActionCreators(Object.assign({}, authActions, i18nActions), dispatch)
+  dispatch => bindActionCreators(authActions, dispatch)
 )
 export default class Main extends Component {
   render() {
-    const { auth, i18n, logout, setLanguage } = this.props;
-    const { language } = i18n;
+    const { auth, i18n: { language }, logout } = this.props;
 
     /*
-      <NavDropdown title='Language' id='menu-language'>
-        <MenuItem onClick={setLanguage.bind(null, 'en')} active={language == 'en'}>English</MenuItem>
-        <MenuItem onClick={setLanguage.bind(null, 'de')} active={language == 'de'}>Deutsch</MenuItem>
-      </NavDropdown>
       <NavDropdown title={<span><Glyphicon glyph='user' /> {auth.user.displayName}</span>} id='menu-user'>
         <MenuItem onClick={logout}>Sign out</MenuItem>
       </NavDropdown>

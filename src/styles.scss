@@ -1,4 +1,4 @@
-@import "~normalize-scss/sass/normalize/import-now";
+@import '~normalize-scss/sass/normalize/import-now';
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Condensed:300,400');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
@@ -18,7 +18,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page {
-  margin: 50px;
+  margin: 50px auto;
+  width: 1200px;
   background: white;
   box-shadow: 10px 10px 50px rgba(0, 0, 0, .3);
 }
@@ -43,24 +44,30 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5em;
 }
 
+@mixin floatingActionShadow($vertical) {
+  box-shadow: 0 0 $vertical rgba(0, 0, 0, .14), 0 $vertical $vertical*2 rgba(0, 0, 0, .28);
+}
+
 .floating-action {
-  position: absolute;
-  bottom: -28px;
-  right: 24px;
   font-size: 24px;
-  width: 56px;
-  height: 41px;
   border-radius: 100%;
   background: #7c4dff;
   color: #fff;
   text-align: center;
+  width: 56px;
+  height: 41px;
   padding-top: 15px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+  @include floatingActionShadow(4px);
   transition: all 200ms ease;
+  z-index: 100;
+  position: absolute;
+  bottom: -28px;
+  right: 24px;
+  cursor: pointer;
+  text-transform: uppercase;
 
   &:hover {
-    bottom: -27px;
-    box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.23), -3px 6px 15px rgba(0, 0, 0, 0.16);
+    @include floatingActionShadow(8px);
   }
 }
 
@@ -150,6 +157,13 @@ small {
 address {
   font-style: normal;
   line-height: 1.5;
+}
+
+@media only screen and (max-width: 1300px) {
+  .page {
+    margin: 50px;
+    width: auto;
+  }
 }
 
 @media only screen and (max-width: 900px) {
