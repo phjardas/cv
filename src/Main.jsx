@@ -17,13 +17,7 @@ import stackoverflowIcon from './img/stackoverflow.svg';
 )
 export default class Main extends Component {
   render() {
-    const { auth, i18n: { language }, logout } = this.props;
-
-    /*
-      <NavDropdown title={<span><Glyphicon glyph='user' /> {auth.user.displayName}</span>} id='menu-user'>
-        <MenuItem onClick={logout}>Sign out</MenuItem>
-      </NavDropdown>
-    */
+    const { auth, i18n: { language }} = this.props;
 
     return <main>
       <Content section='main' language={language} />

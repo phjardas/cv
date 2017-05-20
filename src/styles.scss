@@ -64,6 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: -28px;
   cursor: pointer;
   text-transform: uppercase;
+  opacity: 0;
 
   &:hover {
     @include floatingActionShadow(8px);
@@ -80,6 +81,10 @@ h1, h2, h3, h4, h5, h6 {
   &:hover {
     color: #fff;
   }
+}
+
+.authenticated .floating-action {
+  opacity: 1;
 }
 
 .floating-action, .language-switcher {
