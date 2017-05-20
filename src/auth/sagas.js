@@ -10,6 +10,14 @@ const providers = {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider);
   },
+  github: () => {
+    const provider = new firebase.auth.GithubAuthProvider();
+    auth.signInWithPopup(provider);
+  },
+  twitter: () => {
+    const provider = new firebase.auth.TwitterAuthProvider();
+    auth.signInWithPopup(provider);
+  },
 };
 
 function* createAuthChanges() {

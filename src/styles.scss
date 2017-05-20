@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Condensed:300,400');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
 body {
   font-family: Roboto, sans-serif;
   background: #bdbdbd;
@@ -95,16 +103,62 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 50px 80px 40%;
 }
 
+.login-buttons {
+  @include clearfix;
+}
+
+.login-button {
+  float: left;
+  margin-right: 20px;
+  background-color: #512DA8;
+  color: #fff;
+  height: 50px;
+  width: calc(33% - 20px);
+  border: none;
+  text-align: center;
+  vertical-align: center;
+  font-size: 16px;
+  line-height: 48px;
+  display: block;
+  transition: all .218s;
+  font-family: Roboto, sans-serif;
+  cursor: pointer;
+
+  &:hover {
+    @include floatingActionShadow(8px);
+    background-color: #7c4dff;
+  }
+}
+
+.login-button-icon {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  vertical-align: center;
+  display: block;
+  margin-top: 1px;
+  margin-left: 1px;
+  float: left;
+  background-color: #fff;
+  border-radius: 1px;
+  white-space: nowrap;
+}
+
+.login-button-icon-wrapper {
+  padding: 12px;
+}
+
+.login-button-icon-img {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
 .main {
   padding-right: 50px;
   float: right;
   width: calc(60% - 50px);
-
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
+  @include clearfix;
 }
 
 .aside {
@@ -117,12 +171,7 @@ h1, h2, h3, h4, h5, h6 {
 .page-footer {
   clear: both;
   padding: 80px 0 50px 40%;
-
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
+  @include clearfix;
 }
 
 .page-footer a {

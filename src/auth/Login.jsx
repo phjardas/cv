@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import GoogleButton from 'react-google-button';
+
+import LoginButton from './LoginButton';
+import googleLogo from '../img/Google.svg';
+import githubLogo from '../img/GitHub.svg';
+import twitterLogo from '../img/Twitter.svg';
 
 import { actions as authActions } from '../auth';
 
+
+const providers = [
+  { provider: 'google', logo: googleLogo, label: 'Google' },
+  { provider: 'github', logo: githubLogo, label: 'GitHub' },
+  { provider: 'twitter', logo: twitterLogo, label: 'Twitter' },
+];
 
 const translations = {
   en: {
     title: 'Thank you for your interest in my CV',
     body: 'To continue, please register with one of the options below.',
-    buttons: {
-      google: 'Sign in with Google'
-    }
   },
   de: {
     title: 'Vielen Dank für Ihr Interesse an meinem Lebenslauf',
     body: 'Melden Sie sich bitte mit einer der untenstehenden Methoden an, um fortzufahren.',
-    buttons: {
-      google: 'Mit Google anmelden'
-    }
   }
 };
 
@@ -33,7 +37,15 @@ export default class Authentication extends Component {
     return <div className="login">
       <h2>{labels.title}</h2>
       <p>{labels.body}</p>
-      <GoogleButton onClick={login.bind(null, { provider: 'google' })} label={labels.buttons.google} />
+      <div className="login-buttons">
+        {providers.map(provider =>
+          <LoginButton
+            key={provider.provider}
+            logo={provider.logo}
+            label={provider.label}
+            onClick={login.bind(null, { provider: provider.provider })} />
+        )}
+      </div>
     </div>;
   }
 }

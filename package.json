@@ -46,7 +46,6 @@
     "normalize-scss": "^7.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-google-button": "^0.2.0",
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
     "redux-actions": "^2.0.3",
