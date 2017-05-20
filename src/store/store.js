@@ -4,6 +4,7 @@ import createSagaMiddleware from 'redux-saga';
 
 import reducer from './reducer';
 import sagas from '../sagas';
+import { selectDefaultLanguage } from '../i18n';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -14,7 +15,7 @@ const middlewares = [
 
 const initialState = {
   i18n: {
-    language: localStorage.getItem('language') || 'en',
+    language: selectDefaultLanguage(),
   }
 };
 

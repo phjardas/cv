@@ -4,11 +4,7 @@ import { bindActionCreators } from 'redux';
 import classes from 'classnames';
 
 import { actions as i18nActions } from '.';
-
-const languages = [
-  { language: 'en', label: 'English' },
-  { language: 'de', label: 'Deutsch' },
-];
+import { languages } from '.';
 
 @connect(
   ({ i18n }) => ({ i18n }),
