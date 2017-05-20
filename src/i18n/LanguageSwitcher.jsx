@@ -20,8 +20,8 @@ export default class Main extends Component {
     const { language } = i18n;
     const other = languages.filter(lang => lang.language !== language)[0];
 
-    return <div className="floating-action" onClick={setLanguage.bind(null, other.language)}>
-      {other.language}
-    </div>;
+    return <a className="language-switcher" onClick={setLanguage.bind(null, other.language)}>
+      {other.label}
+    </a>;
   }
 }
