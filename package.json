@@ -8,7 +8,7 @@
     "dist": "npm run clean && webpack --env production -p",
     "start": "webpack-dev-server",
     "data": "node create-data.js && firebase database:update -y / < data.json",
-    "deploy": "npm run dist && firebase deploy --hosting"
+    "deploy": "npm run dist && firebase deploy --only hosting"
   },
   "license": "UNLICENSED",
   "devDependencies": {
