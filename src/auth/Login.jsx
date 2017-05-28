@@ -23,7 +23,7 @@ const translations = {
   },
   de: {
     title: 'Vielen Dank für Ihr Interesse an meinem Lebenslauf',
-    body: 'Melden Sie sich bitte mit einer der untenstehenden Methoden an, um fortzufahren.',
+    body: 'Bitte melden Sie sich mit einer der untenstehenden Methoden an, um fortzufahren.',
   }
 };
 
