@@ -26,6 +26,9 @@ module.exports = env => {
     appMountId: 'app',
     mobile: true,
     baseHref: '/',
+    minify: {
+      collapseWhitespace: true,
+    }
   }));
 
   const config = {
