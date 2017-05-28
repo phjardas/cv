@@ -1,4 +1,5 @@
 import { call, fork, put, take } from 'redux-saga/effects';
+import ga from 'react-ga';
 
 import { firebase } from '../firebase';
 import createChannel from '../sagas/channel';
@@ -8,15 +9,15 @@ const auth = firebase.auth();
 const providers = {
   google: () => {
     const provider = new firebase.auth.GoogleAuthProvider();
-    auth.signInWithPopup(provider);
+    return auth.signInWithPopup(provider);
   },
   github: () => {
     const provider = new firebase.auth.GithubAuthProvider();
-    auth.signInWithPopup(provider);
+    return auth.signInWithPopup(provider);
   },
   twitter: () => {
     const provider = new firebase.auth.TwitterAuthProvider();
-    auth.signInWithPopup(provider);
+    return auth.signInWithPopup(provider);
   },
 };
 
@@ -33,6 +34,7 @@ function* createAuthChanges() {
   while (true) {
     const user = yield call(channel.take);
     yield put({ type: 'auth.update', payload: { user }});
+
     if (user) {
       yield put({ type: 'content.load' });
     }
@@ -42,14 +44,37 @@ function* createAuthChanges() {
 function *login() {
   while (true) {
     const login = yield take('auth.login');
-    providers[login.payload.provider]();
+    yield call(ga.event.bind(ga), {
+      category: 'User',
+      action: 'Signin attempt',
+    });
+
+    try {
+      const result = yield call(providers[login.payload.provider]);
+      yield call(ga.event.bind(ga), {
+        category: 'User',
+        action: 'Signin success',
+        label: result.credential.providerId,
+      });
+    } catch (err) {
+      console.log('sign in error:', err);
+      yield call(ga.event.bind(ga), {
+        category: 'User',
+        action: 'Signin failed',
+        label: err.message || err.toString(),
+      });
+    }
   }
 }
 
 function *logout() {
   while (true) {
     yield take('auth.logout');
-    auth.signOut();
+    yield call(ga.event.bind(ga), {
+      category: 'User',
+      action: 'Signout',
+    });
+    yield call(auth.signOut.bind(auth));
   }
 }
 

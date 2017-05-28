@@ -20,7 +20,7 @@ module.exports = env => {
   }
 
   plugins.push(new HtmlWebpackPlugin({
-    title: 'Philipp Jardas',
+    title: 'Philipp Jardas – Agile Full-Stack Software Engineer',
     template: require('html-webpack-template'),
     inject: false,
     appMountId: 'app',

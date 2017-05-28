@@ -17,9 +17,11 @@ import stackoverflowIcon from './img/stackoverflow.svg';
 )
 export default class Main extends Component {
   render() {
-    const { auth, i18n: { language }} = this.props;
+    const { auth, i18n: { language }, logout } = this.props;
 
     return <main>
+      <button onClick={logout}>sign out</button>
+
       <Content section='main' language={language} />
 
       <footer className="page-footer">
