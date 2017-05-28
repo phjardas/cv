@@ -6,7 +6,9 @@
   "scripts": {
     "clean": "rimraf dist",
     "dist": "npm run clean && webpack --env production -p",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "data": "node create-data.js && firebase database:update -y / < data.json",
+    "deploy": "npm run dist && firebase deploy --hosting"
   },
   "license": "UNLICENSED",
   "devDependencies": {
