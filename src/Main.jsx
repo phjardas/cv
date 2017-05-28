@@ -20,7 +20,7 @@ export default class Main extends Component {
     const { auth, i18n: { language }, logout } = this.props;
 
     return <main>
-      <button onClick={logout}>sign out</button>
+      {false && <button onClick={logout}>sign out</button>}
 
       <Content section='main' language={language} />
 
