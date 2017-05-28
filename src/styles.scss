@@ -10,6 +10,10 @@
   }
 }
 
+* {
+  transition: all 250ms ease;
+}
+
 body {
   font-family: Roboto, sans-serif;
   background: #bdbdbd;
@@ -66,7 +70,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 41px;
   padding-top: 15px;
   @include floatingActionShadow(4px);
-  transition: all 200ms ease;
   z-index: 100;
   position: absolute;
   bottom: -28px;
@@ -99,9 +102,16 @@ h1, h2, h3, h4, h5, h6 {
   right: 56px;
 }
 
-.login {
-  padding: 0 50px 80px 40%;
+.anonymous {
+  .page-header {
+    padding: 80px 50px;
+  }
+
+  .login {
+    padding: 0 50px 80px 50px;
+  }
 }
+
 
 .login-buttons {
   @include clearfix;
@@ -120,7 +130,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
   line-height: 48px;
   display: block;
-  transition: all .218s;
   font-family: Roboto, sans-serif;
   cursor: pointer;
 
@@ -250,7 +259,7 @@ address {
     margin: 25px;
   }
 
-  .page-header, .page-footer {
+  .page-header, .anonymous .page-header, .page-footer {
     padding: 50px;
   }
 
@@ -270,6 +279,12 @@ address {
     width: auto;
     padding: 0 50px;
   }
+
+  .login-button {
+    float: none;
+    width: auto;
+    margin: 20px 0;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -281,7 +296,7 @@ address {
     font-size: 4.7vw;
   }
 
-  .page-header, .page-footer {
+  .page-header, .anonymous .page-header, .page-footer {
     padding: 10vw;
   }
 
