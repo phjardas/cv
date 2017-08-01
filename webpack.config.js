@@ -26,6 +26,9 @@ module.exports = env => {
     appMountId: 'app',
     mobile: true,
     baseHref: '/',
+    meta: [
+        { name: 'theme-color', content: '#512DA8' }
+    ],
     minify: {
       collapseWhitespace: true,
     }
