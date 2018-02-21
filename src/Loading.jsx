@@ -1,3 +1,7 @@
-import React from 'react';
+import React from "react";
 
-export default () => <h2 className="loading">loading…</h2>;
+export default () => (
+  <div className="main">
+    <h2 className="loading">loading…</h2>
+  </div>
+);
