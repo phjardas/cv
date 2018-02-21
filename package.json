@@ -7,7 +7,10 @@
     "clean": "rimraf dist",
     "dist": "npm run clean && webpack --env production -p",
     "start": "webpack-dev-server",
-    "data": "node create-data.js && firebase database:update -y / < data.json",
+    "firebase": "firebase",
+    "data:get": "firebase database:get / | node get-data.js",
+    "data:set":
+      "node create-data.js && firebase database:update -y / < data.json",
     "deploy": "npm run dist && firebase deploy --only hosting"
   },
   "license": "UNLICENSED",
@@ -30,6 +33,7 @@
     "eslint-plugin-react": "^7.0.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
+    "firebase-tools": "^3.17.4",
     "html-webpack-template": "^6.0.1",
     "node-sass": "^4.5.3",
     "rimraf": "^2.6.1",
