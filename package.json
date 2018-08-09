@@ -6,7 +6,7 @@
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'"
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "gatsby": "^1.9.277",
@@ -21,6 +21,6 @@
     "react-markdown": "^3.4.1"
   },
   "devDependencies": {
-    "prettier": "^1.13.7"
+    "firebase-tools": "^4.0.3"
   }
 }
