@@ -1,18 +1,27 @@
 import React from 'react'
+import { withPrefix } from 'gatsby-link'
 import qrcode from './qrcode.svg'
 
 export default ({ title, tagline, languages, language }) => (
   <header className="page-header">
-    <h1 className="title">{title}</h1>
-    <div className="subtitle">{tagline}</div>
+    <div className="main">
+      <h1 className="title">{title}</h1>
+      <div className="subtitle">{tagline}</div>
+    </div>
     {languages.filter(lang => lang.code !== language).map(lang => (
       <a key={lang.code} className="language-switcher" href={`/${lang.code}`}>
         {lang.label}
       </a>
     ))}
-    <div className="floating-action" onClick={() => window.print()}>
+    <a
+      className="floating-action"
+      href={withPrefix(`Philipp Jardas ${language}.pdf`)}
+      target="_blank"
+    >
       <i className="material-icons">print</i>
-    </div>
-    <img className="qr" src={qrcode} />
+    </a>
+    <aside className="aside">
+      <img className="qr" src={qrcode} />
+    </aside>
   </header>
 )

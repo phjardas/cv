@@ -12,19 +12,21 @@ export default ({ locale, data: { general, profile, workExperience } }) => {
 
   return (
     <div>
-      <aside className="aside">
-        <Profile
-          profile={profile.edges.filter(localeSelector).map(parseEdge)[0]}
-        />
-      </aside>
-      <section className="main">
-        <h2>{employmentHistory}</h2>
-        <Experience
-          experience={workExperience.edges
-            .filter(localeSelector)
-            .map(parseEdge)}
-        />
-      </section>
+      <div className="content">
+        <section className="main">
+          <h2>{employmentHistory}</h2>
+          <Experience
+            experience={workExperience.edges
+              .filter(localeSelector)
+              .map(parseEdge)}
+          />
+        </section>
+        <aside className="aside">
+          <Profile
+            profile={profile.edges.filter(localeSelector).map(parseEdge)[0]}
+          />
+        </aside>
+      </div>
       <Footer contactMe={contactMe} />
     </div>
   )

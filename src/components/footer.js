@@ -7,28 +7,27 @@ import stackoverflowIcon from './stackoverflow.svg'
 
 export default ({ contactMe }) => (
   <footer className="page-footer">
-    <p>
-      {contactMe}{' '}
-      <a href="mailto:philipp@jardas.de">
-        <i className="material-icons">email</i> philipp@jardas.de
-      </a>
-    </p>
-    <p className="profiles">
-      <a href="https://www.xing.com/profile/Philipp_Jardas">
-        <img src={xingIcon} className="icon" /> XING
-      </a>
-      <br />
-      <a href="http://de.linkedin.com/in/philippjardas">
-        <img src={linkedinIcon} className="icon" /> LinkedIn
-      </a>
-      <br />
-      <a href="https://github.com/phjardas">
-        <img src={githubIcon} className="icon" /> GitHub
-      </a>
-      <br />
-      <a href="http://stackoverflow.com/users/469029/philipp-jardas">
-        <img src={stackoverflowIcon} className="icon" /> Stack Overflow
-      </a>
-    </p>
+    {contactMe}{' '}
+    <a href="mailto:philipp@jardas.de">
+      <i className="material-icons">email</i> philipp@jardas.de
+    </a>
+    <a href="https://www.xing.com/profile/Philipp_Jardas" className="profiles">
+      <img src={xingIcon} className="icon" /> XING
+    </a>
+    <br />
+    <a href="http://de.linkedin.com/in/philippjardas" className="profiles">
+      <img src={linkedinIcon} className="icon" /> LinkedIn
+    </a>
+    <br />
+    <a href="https://github.com/phjardas" className="profiles">
+      <img src={githubIcon} className="icon" /> GitHub
+    </a>
+    <br />
+    <a
+      href="http://stackoverflow.com/users/469029/philipp-jardas"
+      className="profiles"
+    >
+      <img src={stackoverflowIcon} className="icon" /> Stack Overflow
+    </a>
   </footer>
 )

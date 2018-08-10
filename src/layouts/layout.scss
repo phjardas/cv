@@ -2,28 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto:300,400,500');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+$golden-ratio: 1.61803398875;
 $page-radius: 8px;
-
-@mixin clearfix {
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-}
-
-* {
-  transition: all 250ms ease;
-}
 
 body {
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background: #bdbdbd;
   color: #212121;
   text-rendering: optimizeLegibility;
-  font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -42,7 +28,6 @@ h6 {
   width: 1200px;
   background: white;
   box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.3);
-  @include clearfix;
   border-radius: $page-radius;
 }
 
@@ -56,10 +41,13 @@ h6 {
     #512da8 100%
   );
   color: #fff;
-  padding: 80px 25px 80px 40%;
+  padding: 80px 0;
   position: relative;
   border-top-left-radius: $page-radius;
   border-top-right-radius: $page-radius;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .title {
@@ -74,6 +62,13 @@ h6 {
   color: #ccc;
   margin-top: 10px;
   font-size: 1.5em;
+}
+
+.qr {
+  width: 100px;
+  height: 100px;
+  color: #999;
+  display: none;
 }
 
 @mixin floatingActionShadow($vertical) {
@@ -119,33 +114,53 @@ h6 {
   right: 56px;
 }
 
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .main {
+  flex: $golden-ratio;
+  order: 2;
+  padding-left: 25px;
   padding-right: 50px;
-  float: right;
-  width: calc(60% - 50px);
-  @include clearfix;
 }
 
 .aside {
-  float: left;
-  width: calc(40% - 100px);
-  padding: 0 50px;
+  flex: 1;
+  order: 1;
   text-align: right;
+  padding-left: 50px;
+  padding-right: 25px;
+}
 
-  em {
-    font-style: normal;
-    font-size: 0.8rem;
-    color: #757575;
+.content {
+  .aside {
+    em {
+      font-style: normal;
+      font-size: 0.8rem;
+      color: #757575;
+    }
   }
 }
 
 .page-footer {
-  clear: both;
-  padding: 80px 0 50px 40%;
-  @include clearfix;
+  margin-top: 50px;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #512da8;
+  color: #ccc;
+  border-bottom-left-radius: $page-radius;
+  border-bottom-right-radius: $page-radius;
 
   a {
-    color: #212121;
+    color: #ccc;
+    &:hover {
+      color: #fff;
+    }
   }
 }
 
@@ -194,16 +209,6 @@ address {
   line-height: 1.5;
 }
 
-.qr {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  left: calc(40% - 50px - 100px);
-  top: 50px;
-  color: #999;
-  display: none;
-}
-
 @media only screen and (max-width: 1300px) {
   .page {
     margin: 50px;
@@ -212,17 +217,6 @@ address {
 }
 
 @media only screen and (max-width: 900px) {
-  .page {
-    margin: 25px;
-  }
-
-  .page-header,
-  .page-footer {
-    padding: 50px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
   .page {
     margin: 0;
   }
@@ -234,9 +228,8 @@ address {
 
   .aside,
   .main {
-    float: none;
+    flex: 1 1 100%;
     text-align: left;
-    width: auto;
     padding: 0 50px;
   }
 }
@@ -280,6 +273,10 @@ address {
 }
 
 @media only print {
+  body {
+    font-size: 11pt;
+  }
+
   body,
   .page-header,
   .title,
@@ -293,9 +290,19 @@ address {
   a,
   small,
   .aside em,
+  .page-footer,
   .page-footer a {
     color: #000;
     background: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
   }
 
   .floating-action,
@@ -307,18 +314,44 @@ address {
   .page {
     box-shadow: none;
     margin: 0;
+    width: auto;
+    max-width: auto;
   }
 
   .page,
-  .page-header {
+  .page-header,
+  .page-footer {
     border-radius: 0;
   }
 
+  .content {
+    .aside,
+    .main {
+      flex: 1 1 100%;
+      text-align: left;
+      padding: 0;
+    }
+  }
+
   .page-header {
-    padding: 50px 50px 50px 40%;
+    padding: 0;
+
+    .aside {
+      flex: 0;
+      padding-left: 0;
+    }
+  }
+
+  .page-footer {
+    justify-content: flex-start;
+    padding: 0;
+
+    a {
+      margin-left: 0.5rem;
+    }
   }
 
   .qr {
-    display: block;
+    display: inline-block;
   }
 }
