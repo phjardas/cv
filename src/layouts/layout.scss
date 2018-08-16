@@ -1,6 +1,5 @@
 @import '~normalize-scss/sass/normalize/import-now';
-@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto:300,400,500');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
 $golden-ratio: 1.61803398875;
 $page-radius: 8px;
@@ -67,8 +66,11 @@ h6 {
 .qr {
   width: 100px;
   height: 100px;
-  color: #999;
   display: none;
+
+  path {
+    fill: #999;
+  }
 }
 
 @mixin floatingActionShadow($vertical) {
@@ -324,22 +326,16 @@ address {
     border-radius: 0;
   }
 
-  .content {
-    .aside,
-    .main {
-      flex: 1 1 100%;
-      text-align: left;
-      padding: 0;
-    }
+  .page-header {
+    padding-bottom: 0;
   }
 
-  .page-header {
-    padding: 0;
+  .main {
+    padding-right: 0;
+  }
 
-    .aside {
-      flex: 0;
-      padding-left: 0;
-    }
+  .aside {
+    padding-left: 0;
   }
 
   .page-footer {
@@ -353,5 +349,9 @@ address {
 
   .qr {
     display: inline-block;
+
+    path {
+      fill: black;
+    }
   }
 }

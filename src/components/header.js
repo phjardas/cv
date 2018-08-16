@@ -1,6 +1,7 @@
 import React from 'react'
 import { withPrefix } from 'gatsby-link'
-import qrcode from './qrcode.svg'
+import Icon from './icon'
+import QR from './qr'
 
 export default ({ title, tagline, languages, language }) => (
   <header className="page-header">
@@ -18,10 +19,10 @@ export default ({ title, tagline, languages, language }) => (
       href={withPrefix(`Philipp Jardas ${language}.pdf`)}
       target="_blank"
     >
-      <i className="material-icons">print</i>
+      <Icon icon="print" />
     </a>
     <aside className="aside">
-      <img className="qr" src={qrcode} />
+      <QR />
     </aside>
   </header>
 )

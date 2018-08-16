@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Icon from './icon'
+
 import xingIcon from './XING.svg'
 import githubIcon from './GitHub.svg'
 import linkedinIcon from './LinkedIn.svg'
@@ -9,7 +11,7 @@ export default ({ contactMe }) => (
   <footer className="page-footer">
     {contactMe}{' '}
     <a href="mailto:philipp@jardas.de">
-      <i className="material-icons">email</i> philipp@jardas.de
+      <Icon icon="envelope" className="mr-1" /> philipp@jardas.de
     </a>
     <a href="https://www.xing.com/profile/Philipp_Jardas" className="profiles">
       <img src={xingIcon} className="icon" /> XING
