@@ -153,16 +153,27 @@ h6 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-end;
   background: #512da8;
   color: #ccc;
   border-bottom-left-radius: $page-radius;
   border-bottom-right-radius: $page-radius;
 
-  a {
-    color: #ccc;
-    &:hover {
-      color: #fff;
+  .contact {
+    display: flex;
+    flex-direction: row;
+
+    a {
+      color: #ccc;
+      margin-left: 16px;
+      &:hover {
+        color: #fff;
+      }
     }
+  }
+
+  .ga {
+    font-size: 0.75em;
   }
 }
 
@@ -231,8 +242,18 @@ address {
 
   .page-footer {
     flex-direction: column;
-    a {
-      margin-top: 8px;
+    align-items: flex-start;
+
+    .contact {
+      flex-direction: column;
+
+      a {
+        margin: 8px 0 0 0;
+      }
+    }
+
+    .ga {
+      margin-top: 16px;
     }
   }
 
