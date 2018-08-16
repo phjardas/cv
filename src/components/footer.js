@@ -2,34 +2,30 @@ import React from 'react'
 
 import Icon from './icon'
 
-import xingIcon from './XING.svg'
-import githubIcon from './GitHub.svg'
-import linkedinIcon from './LinkedIn.svg'
-import stackoverflowIcon from './stackoverflow.svg'
-
 export default ({ contactMe }) => (
   <footer className="page-footer">
     {contactMe}{' '}
     <a href="mailto:philipp@jardas.de">
-      <Icon icon="envelope" className="mr-1" /> philipp@jardas.de
+      <Icon icon="envelope" /> philipp@jardas.de
     </a>
     <a href="https://www.xing.com/profile/Philipp_Jardas" className="profiles">
-      <img src={xingIcon} className="icon" /> XING
+      <Icon icon={{ prefix: 'fab', iconName: 'xing' }} /> XING
     </a>
-    <br />
     <a href="http://de.linkedin.com/in/philippjardas" className="profiles">
-      <img src={linkedinIcon} className="icon" /> LinkedIn
+      <Icon icon={{ prefix: 'fab', iconName: 'linkedin' }} /> LinkedIn
     </a>
-    <br />
     <a href="https://github.com/phjardas" className="profiles">
-      <img src={githubIcon} className="icon" /> GitHub
+      <Icon icon={{ prefix: 'fab', iconName: 'github' }} /> GitHub
     </a>
-    <br />
     <a
       href="http://stackoverflow.com/users/469029/philipp-jardas"
       className="profiles"
     >
-      <img src={stackoverflowIcon} className="icon" /> Stack Overflow
+      <Icon icon={{ prefix: 'fab', iconName: 'stack-overflow' }} /> Stack
+      Overflow
+    </a>
+    <a href="http://twitter.com/phjardas" className="profiles">
+      <Icon icon={{ prefix: 'fab', iconName: 'twitter' }} /> Twitter
     </a>
   </footer>
 )

@@ -224,8 +224,16 @@ address {
   }
 
   .page,
-  .page-header {
+  .page-header,
+  .page-footer {
     border-radius: 0;
+  }
+
+  .page-footer {
+    flex-direction: column;
+    a {
+      margin-top: 8px;
+    }
   }
 
   .aside,
