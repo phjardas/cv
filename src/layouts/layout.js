@@ -1,13 +1,14 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Header from '../components/header'
+import Animator from '../components/animator'
 import './layout.scss'
 
 export default ({ children, data, language }) => {
   const { title, tagline } = data.general.edges[0].node
 
   return (
-    <div className="page">
+    <Animator>
       <Helmet title={`${title} - ${tagline}`} />
       <Header
         title={title}
@@ -16,6 +17,6 @@ export default ({ children, data, language }) => {
         languages={data.site.siteMetadata.languages}
       />
       {children}
-    </div>
+    </Animator>
   )
 }
