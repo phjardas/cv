@@ -2,15 +2,15 @@ image: node:10.9.0
 
 pipelines:
   default:
-  - step:
-      caches:
-      - node
-      script:
-      - npm ci
-      - npm build
-  - step:
-      caches:
-      - node
-      deployment: production
-      script:
-      - npm run deploy -- --token "$FIREBASE_TOKEN"
+    - step:
+        caches:
+          - node
+        script:
+          - npm ci
+          - npm run build
+    - step:
+        caches:
+          - node
+        deployment: production
+        script:
+          - npm run deploy -- --token "$FIREBASE_TOKEN"
