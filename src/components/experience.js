@@ -18,13 +18,13 @@ const Experience = ({
     </h3>
     <p>
       <small>
-        {new Date(from).toLocaleDateString(undefined, {
+        {new Date(from.split('+')[0]).toLocaleDateString(undefined, {
           month: 'long',
           year: 'numeric',
-        })}{' '}
-        –{' '}
+        })}
+        {' – '}
         {until
-          ? new Date(until).toLocaleDateString(undefined, {
+          ? new Date(until.split('+')[0]).toLocaleDateString(undefined, {
               month: 'long',
               year: 'numeric',
             })
