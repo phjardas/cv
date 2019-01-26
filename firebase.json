@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist",
     "headers": [
       {
         "source": "*.@(js|css)",
@@ -10,7 +10,7 @@
     "redirects": [
       {
         "source": "/",
-        "destination": "/en",
+        "destination": "/en.html",
         "type": 301
       }
     ]

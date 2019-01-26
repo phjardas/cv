@@ -1,0 +1,2 @@
+import './animator'
+import './qr'

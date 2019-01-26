@@ -1,5 +1,9 @@
-@import '~normalize-scss/sass/normalize/import-now';
+@import '../node_modules/normalize-scss/sass/normalize/import-now';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/solid.css');
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/brands.css');
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css');
 
 $golden-ratio: 1.61803398875;
 $page-radius: 8px;
@@ -10,6 +14,9 @@ body {
   background: linear-gradient(#ffffff 0%, #bdbdbd 500px);
   color: #212121;
   text-rendering: optimizeLegibility;
+  --primary: hsl(258, 58%, 42%);
+  --primary-light: hsl(258, 58%, 50%);
+  --secondary: hsl(258, 100%, 65%);
 }
 
 h1,
