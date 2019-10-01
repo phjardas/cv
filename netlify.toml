@@ -16,3 +16,8 @@
   from = "/de"
   to = "/de.html"
   status = 301
+
+[[redirects]]
+  from = "/a11y"
+  to = "https://docs.google.com/presentation/d/e/2PACX-1vTfSd7-aUuD737BDGXmw3xi4MS7HYTys9lKaR3pG0ZAlQfoU14odOgKjSY1Yx_r0agyX1JFgDW1vEwF/pub"
+  status = 302
