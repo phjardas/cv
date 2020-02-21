@@ -12,11 +12,14 @@ body {
   font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background: #bdbdbd;
   background: linear-gradient(#ffffff 0%, #bdbdbd 500px);
-  color: #212121;
+  color: rgb(33, 33, 33);
   text-rendering: optimizeLegibility;
   --primary: hsl(258, 58%, 42%);
+  --primary-text: rgb(255, 255, 255);
+  --subtitle-text: rgb(204, 204, 204);
   --primary-light: hsl(258, 58%, 50%);
   --secondary: hsl(258, 100%, 65%);
+  --secondary-text: rgb(255, 255, 255);
 }
 
 h1,
@@ -47,7 +50,6 @@ h6 {
     var(--primary) 50%,
     var(--primary) 100%
   );
-  color: #fff;
   padding: 80px 0;
   position: relative;
   border-top-left-radius: $page-radius;
@@ -61,12 +63,14 @@ h6 {
   margin: 0;
   font-size: 3em;
   text-transform: uppercase;
-  color: white;
+  color: var(--primary-text);
+  transition: color 300ms linear;
 }
 
 .subtitle {
   font-weight: 300;
-  color: #ccc;
+  color: var(--subtitle-text);
+  transition: color 300ms linear;
   margin-top: 10px;
   font-size: 1.5em;
 }
@@ -90,7 +94,8 @@ h6 {
   font-size: 24px;
   border-radius: 100%;
   background: var(--secondary);
-  color: #fff;
+  color: var(--secondary-text);
+  transition: color 300ms linear;
   text-align: center;
   width: 56px;
   height: 41px;
@@ -110,7 +115,8 @@ h6 {
 .language-switcher {
   position: absolute;
   top: 20px;
-  color: #ccc;
+  color: var(--subtitle-text);
+  transition: color 300ms linear;
   cursor: pointer;
   text-transform: uppercase;
 
