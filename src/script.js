@@ -1,2 +1,0 @@
-import './animator'
-import './qr'

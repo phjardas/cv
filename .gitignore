@@ -1,4 +1,6 @@
 /.cache/
-/dist/
+/.yarn/unplugged/
+/.yarn/build-state.yml
 /node_modules/
+/public/build/
 *.log
