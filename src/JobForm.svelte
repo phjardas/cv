@@ -1,48 +1,47 @@
 <script>
-  import { firestore, Firebase } from './firebase'
-  import Header from './Header.svelte'
-  import Layout from './Layout.svelte'
+  import { firestore, Firebase } from './firebase';
+  import Header from './Header.svelte';
+  import Layout from './Layout.svelte';
+  import Title from './Title.svelte';
+  import Main from './Main.svelte';
+  import Subtitle from './Subtitle.svelte';
 
-  let name = 'Philipp Jardas'
-  let email = 'philipp@jardas.de'
-  let job = 'This is a test.'
-  let submitting = false
-  let error
-  export let onSubmit
+  let name = '';
+  let email = '';
+  let text = '';
+  let submitting = false;
+  let error;
+  export let onSubmit;
 
   async function submit(e) {
-    e.preventDefault()
-    submitting = true
-    error = null
+    e.preventDefault();
+    submitting = true;
+    error = null;
     try {
       const ref = await firestore.collection('jobs').add({
         name,
         email,
-        job,
+        text,
         createdAt: Firebase.firestore.FieldValue.serverTimestamp(),
-      })
-      const doc = await ref.get()
-      onSubmit({ ...doc.data(), id: ref.id })
+      });
+      const doc = await ref.get();
+      onSubmit({ ...doc.data(), id: ref.id });
     } catch (err) {
-      console.error(err)
-      error = err
+      console.error(err);
+      error = err;
     } finally {
-      submitting = false
+      submitting = false;
     }
   }
 </script>
 
 <style>
-  .main {
-    padding: 0 2rem 2rem;
+  .job-form {
+    padding-top: 2rem;
   }
 
-  :global(p) {
+  .job-form :global(p) {
     margin-bottom: 2rem;
-  }
-
-  .lead {
-    font-size: 1.25rem;
   }
 
   .form-group {
@@ -93,10 +92,11 @@
     border: none;
     padding: 1rem;
     font-size: 1.5rem;
+    font-family: inherit;
+    font-weight: 300;
     width: calc(100% - 2rem);
     border-radius: 0.5rem;
-    transition: border-color 300ms linear, color 300ms linear,
-      box-shadow 300ms linear;
+    transition: border-color 300ms linear, color 300ms linear, box-shadow 300ms linear;
   }
 
   .submit-button:focus,
@@ -108,10 +108,6 @@
   }
 
   @media only screen and (max-width: 500px) {
-    .main {
-      padding: 0 10vw 10vw;
-    }
-
     .form-label,
     .form-control,
     .submit-button {
@@ -121,65 +117,34 @@
 </style>
 
 <Layout>
-  <Header />
-  <main class="main">
-    <h2>
-      Hi, I'm Philipp!
-      <span role="img" aria-label="Waving hand">👋</span>
-    </h2>
-    <p class="lead">
-      I've been developing software for the last 20 years. My main technologies
-      are JavaScript, TypeScript, Node.js and React. I'm passionate about
-      software startups, agile methodologies, software quality, serverless
-      architecture, domain-driven design and accessibility.
-    </p>
-    <p>
-      If you're a recruiter and would like to work with me, I would appreciate
-      if you could fill out the form below to get instant access to my
-      comprehensive CV.
-    </p>
-    <form on:submit={submit}>
-      <div class="form-group">
-        <label for="name" class="form-label">What's your name?</label>
-        <input
-          id="name"
-          type="text"
-          autocomplete="name"
-          bind:value={name}
-          required
-          class="form-control"
-          disabled={submitting} />
-      </div>
-      <div class="form-group">
-        <label for="email" class="form-label">And your email address?</label>
-        <input
-          id="email"
-          type="email"
-          autocomplete="email"
-          bind:value={email}
-          required
-          class="form-control"
-          disabled={submitting} />
-      </div>
-      <div class="form-group">
-        <label for="job" class="form-label">
-          Please paste a description of the position you're trying to fill
-        </label>
-        <textarea
-          id="job"
-          bind:value={job}
-          required
-          rows="20"
-          class="form-control form-control-normal"
-          disabled={submitting} />
-        <div class="form-help">
-          The formatting doesn't really matter. Please include as much
-          information as you can provide at this time.
+  <Header>
+    <Main>
+      <Title>Hi, I'm Philipp!</Title>
+      <Subtitle>
+        I'm a full-stack software engineer with more than 20 years of experience. My main technologies are JavaScript, TypeScript, Node.js and React. I'm
+        passionate about software startups, accessibility, agile methodologies, diversity, software quality, serverless architecture and domain-driven design.
+      </Subtitle>
+    </Main>
+  </Header>
+  <Main>
+    <div class="job-form">
+      <p>If you're a recruiter and would like to work with me, I would appreciate if you could fill out the form below to get instant access to my CV.</p>
+      <form on:submit={submit}>
+        <div class="form-group">
+          <label for="name" class="form-label">What's your name?</label>
+          <input id="name" type="text" autocomplete="name" bind:value={name} required class="form-control" disabled={submitting} />
         </div>
-      </div>
-      <button type="submit" class="submit-button" disabled={submitting}>
-        {submitting ? 'Submitting...' : 'Submit'}
-      </button>
-    </form>
-  </main>
+        <div class="form-group">
+          <label for="email" class="form-label">And your email address?</label>
+          <input id="email" type="email" autocomplete="email" bind:value={email} required class="form-control" disabled={submitting} />
+        </div>
+        <div class="form-group">
+          <label for="text" class="form-label">Please paste a description of the position you're trying to fill</label>
+          <textarea id="text" bind:value={text} required rows="20" class="form-control form-control-normal" disabled={submitting} />
+          <div class="form-help">The formatting doesn't really matter. Please include as much information as you can provide at this time.</div>
+        </div>
+        <button type="submit" class="submit-button" disabled={submitting}>{submitting ? 'Submitting...' : 'Submit'}</button>
+      </form>
+    </div>
+  </Main>
 </Layout>
