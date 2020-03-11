@@ -8,16 +8,16 @@
   .main {
     flex: 1.61803398875;
     order: 2;
-    padding-left: 25px;
-    padding-right: 50px;
+    padding-left: 2rem;
+    padding-right: 4rem;
   }
 
   .aside {
     flex: 1;
     order: 1;
     text-align: right;
-    padding-left: 50px;
-    padding-right: 25px;
+    padding-left: 4rem;
+    padding-right: 2rem;
   }
 
   @media only screen and (max-width: 900px) {
@@ -25,7 +25,7 @@
     .main {
       flex: 1 1 100%;
       text-align: left;
-      padding: 0 50px;
+      padding: 0 4rem;
     }
   }
 

@@ -42,13 +42,13 @@
   }
 
   :global(h2) {
-    margin-top: 50px;
-    margin-bottom: 25px;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
   }
 
   :global(h3) {
-    margin-top: 25px;
+    margin-top: 2rem;
     margin-bottom: 0;
     font-size: 1.3em;
     font-weight: 400;
