@@ -12,5 +12,8 @@
   "scripts": {
     "develop": "parcel src/en.html src/de.html",
     "build": "rm -rf dist && parcel build src/en.html src/de.html"
+  },
+  "dependencies": {
+    "parcel-plugin-static-files-copy": "^2.4.3"
   }
 }

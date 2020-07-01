@@ -1,2 +1,1 @@
 import './animator'
-import './qr'
