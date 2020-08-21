@@ -90,6 +90,8 @@ h6 {
   width: 10rem;
   height: 10rem;
   margin: -2rem 0;
+  border: 3px solid var(--primary-text);
+  transition: border-color 300ms linear;
 }
 
 @mixin floatingActionShadow($vertical) {
