@@ -249,14 +249,20 @@ address {
   line-height: 1.5;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1299px) {
   .page {
     margin: 50px;
     width: auto;
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 900px) {
+  .page {
+    animation: page-appear 300ms ease-in-out;
+  }
+}
+
+@media only screen and (max-width: 899px) {
   .page {
     margin: 0;
   }
@@ -298,7 +304,7 @@ address {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 499px) {
   .title {
     font-size: 9.5vw;
   }
@@ -424,5 +430,17 @@ address {
     path {
       fill: black;
     }
+  }
+}
+
+@keyframes page-appear {
+  0% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
