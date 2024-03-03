@@ -3,17 +3,18 @@
   "version": "3.0.0",
   "private": true,
   "homepage": "https://cv.jardas.de/",
-  "devDependencies": {
-    "normalize-scss": "^7.0.1",
-    "parcel-bundler": "^1.11.0",
-    "parcel-plugin-inlinesvg": "^0.1.0",
-    "sass": "^1.16.1"
-  },
   "scripts": {
     "develop": "parcel src/en.html src/de.html",
     "build": "rm -rf dist && parcel build src/en.html src/de.html"
   },
-  "dependencies": {
-    "parcel-plugin-static-files-copy": "^2.4.3"
+  "devDependencies": {
+    "normalize-scss": "^7.0.1",
+    "parcel-bundler": "^1.11.0",
+    "parcel-plugin-inlinesvg": "^0.1.0",
+    "parcel-plugin-static-files-copy": "^2.4.3",
+    "sass": "^1.16.1"
+  },
+  "volta": {
+    "node": "21.6.2"
   }
 }
