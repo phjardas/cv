@@ -2,15 +2,16 @@
 <html lang="{{ language }}">
   <head>
     {% metagen
-       title = "Philipp Jardas - " + title,
-       desc = description,
-       locale = language,
-       type = "website",
-       css = ["/styles.css"],
-       js = ["/assets/main.js"]
-    %}
-    <link rel="alternate" hreflang="en" href="https://cv.jardas.de/en.html"/>
-    <link rel="alternate" hreflang="de" href="https://cv.jardas.de/de.html"/>
+    title = metadata.title + " · " + metadata.subtitle,
+    desc = description,
+    locale = language,
+    type = "website",
+    css = ["/styles.css"],
+    js = ["/assets/main.js"]
+ %}
+    {% for lang in metadata.languages %}
+      <link rel="alternate" hreflang="{{ lang }}" href="{{ metadata.url }}/{{ lang }}/"/>
+    {% endfor %}
   </head>
   <body>
     <div class="page" id="page">
