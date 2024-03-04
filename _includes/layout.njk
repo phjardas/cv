@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+  <head>
+    {% metagen
+       title = "Philipp Jardas - " + title,
+       desc = description,
+       locale = language,
+       type = "website",
+       css = ["/styles.css"],
+       js = ["/assets/main.js"]
+    %}
+    <link rel="alternate" hreflang="en" href="https://cv.jardas.de/en.html"/>
+    <link rel="alternate" hreflang="de" href="https://cv.jardas.de/de.html"/>
+  </head>
+  <body>
+    <div class="page" id="page">
+      {{ content | safe }}
+    </div>
+  </body>
+</html>

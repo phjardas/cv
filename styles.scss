@@ -1,15 +1,15 @@
-@import '../node_modules/normalize-scss/sass/normalize/import-now';
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import "./node_modules/normalize-scss/sass/normalize/import-now";
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
 
-@import url('https://use.fontawesome.com/releases/v5.6.3/css/solid.css');
-@import url('https://use.fontawesome.com/releases/v5.6.3/css/brands.css');
-@import url('https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css');
+@import url("https://use.fontawesome.com/releases/v5.6.3/css/solid.css");
+@import url("https://use.fontawesome.com/releases/v5.6.3/css/brands.css");
+@import url("https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css");
 
 $golden-ratio: 1.61803398875;
 $page-radius: 8px;
 
-body {
-  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+:root {
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #bdbdbd;
   background: linear-gradient(#ffffff 0%, #bdbdbd 500px);
   color: rgb(33, 33, 33);
@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: #616161;
 }
@@ -95,7 +95,8 @@ h6 {
 }
 
 @mixin floatingActionShadow($vertical) {
-  box-shadow: 0 0 $vertical rgba(0, 0, 0, 0.14),
+  box-shadow:
+    0 0 $vertical rgba(0, 0, 0, 0.14),
     0 $vertical $vertical * 2 rgba(0, 0, 0, 0.28);
 }
 
@@ -194,13 +195,6 @@ h6 {
         color: #fff;
       }
     }
-
-    *:first-child {
-    }
-  }
-
-  .ga {
-    font-size: 0.75em;
   }
 }
 

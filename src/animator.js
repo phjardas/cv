@@ -45,16 +45,20 @@ function rgb(color) {
 
 function animateHue() {
   window.cvAnimationRunning = true
-  const body = document.getElementsByTagName('body')[0]
+  const root = document.documentElement
   let hue = 258
 
   const increaseHue = () => {
     hue = (hue + 1) % 360
     const styles = createStyles(hue)
-    Object.keys(styles).forEach(key => body.style.setProperty(key, styles[key]))
+    Object.keys(styles).forEach((key) =>
+      root.style.setProperty(key, styles[key])
+    )
   }
 
   setInterval(increaseHue, 500)
 }
 
-if (!window.cvAnimationRunning) animateHue()
+window.addEventListener('DOMContentLoaded', () => {
+  if (!window.cvAnimationRunning) animateHue()
+})

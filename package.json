@@ -4,17 +4,20 @@
   "private": true,
   "homepage": "https://cv.jardas.de/",
   "scripts": {
-    "start": "parcel src/en.html src/de.html",
-    "build": "rm -rf dist && parcel build src/en.html src/de.html"
-  },
-  "devDependencies": {
-    "normalize-scss": "^7.0.1",
-    "parcel-bundler": "^1.11.0",
-    "parcel-plugin-inlinesvg": "^0.1.0",
-    "parcel-plugin-static-files-copy": "^2.4.3",
-    "sass": "^1.16.1"
+    "build": "npm run compile && eleventy",
+    "start": "npm run compile && eleventy --serve --incremental",
+    "compile": "npx esbuild --bundle --minify --outdir=assets src/main.js"
   },
   "volta": {
     "node": "21.6.2"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "eleventy-plugin-metagen": "^1.8.3",
+    "eleventy-sass": "^2.2.4",
+    "esbuild": "^0.20.1",
+    "normalize-scss": "^8.0.0",
+    "nunjucks": "^3.2.4",
+    "prettier": "^3.2.5"
   }
 }
