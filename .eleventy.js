@@ -1,8 +1,13 @@
 const sass = require("eleventy-sass");
 const metagen = require("eleventy-plugin-metagen");
 const htmlmin = require("html-minifier");
+const i18n = require("eleventy-plugin-i18n");
 
 module.exports = (config) => {
+  config.addPlugin(i18n, {
+    translations: require("./_data/i18n"),
+  });
+
   config.addPlugin(sass);
   config.addPlugin(metagen);
 
