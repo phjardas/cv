@@ -23,4 +23,16 @@ module.exports = {
     de: "Kontakt",
     en: "Contact me",
   },
+  "employment-history": {
+    de: "Arbeitserfahrung",
+    en: "Employment History",
+  },
+  at: {
+    de: "bei",
+    en: "at",
+  },
+  now: {
+    de: "jetzt",
+    en: "now",
+  },
 };

@@ -40,6 +40,46 @@
       </header>
 
       <div class="content">
+        <main class="main">
+          <h2>{{ 'employment-history' | i18n }}</h2>
+          <div>
+            {% for work in works %}
+              <div>
+                <h3>
+                  {{ work.role }}
+                  <small>{{ 'at' | i18n }}</small>
+                  {{ work.company }}
+                </h3>
+                <p>
+                  <small>
+                    {{ work.from | date('MMMM yyyy') }}
+                    –
+                    {% if work.until %}
+                      {{ work.until | date('MMMM yyyy') }}
+                    {% else %}
+                      {{ 'now' | i18n }}
+                    {% endif %}
+                    in {{ work.location }}
+                  </small>
+                </p>
+                {% for line in work.description[language] %}
+                  <p>{{ line }}</p>
+                {% endfor %}
+                {% if work.technologies %}
+                  <p>
+                    <small>
+                      {% for tech in work.technologies %}
+                        {{ tech }}
+                        {%- if not loop.last %}, {% endif %}
+                      {% endfor %}
+                    </small>
+                  </p>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </main>
+
         {{ content | safe }}
       </div>
 

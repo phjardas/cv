@@ -1,4 +1,4 @@
-const contrastThreshold = 3;
+const contrastThreshold = 4.5;
 
 export function getContrastText(background, preferred, alternative) {
   return getContrastRatio(preferred, background) >= contrastThreshold
