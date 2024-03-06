@@ -1,5 +1,5 @@
 @import "./node_modules/normalize-scss/sass/normalize/import-now";
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 
 @import url("https://use.fontawesome.com/releases/v5.6.3/css/solid.css");
 @import url("https://use.fontawesome.com/releases/v5.6.3/css/brands.css");
@@ -9,11 +9,12 @@ $golden-ratio: 1.61803398875;
 $page-radius: 8px;
 
 :root {
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lato, sans-serif;
   background: #bdbdbd;
   background: linear-gradient(#ffffff 0%, #bdbdbd 500px);
-  color: rgb(33, 33, 33);
+  color: #616161;
   text-rendering: optimizeLegibility;
+  font-weight: 300;
   --primary: hsl(258, 58%, 42%);
   --primary-text: rgb(255, 255, 255);
   --subtitle-text: rgb(204, 204, 204);
@@ -23,14 +24,19 @@ $page-radius: 8px;
 }
 
 h1,
-h2,
+h2 {
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  color: inherit;
+}
+
 h3,
 h4,
 h5,
 h6 {
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  color: #616161;
+  font-family: inherit;
+  font-weight: 400;
+  color: inherit;
 }
 
 .page {
@@ -62,7 +68,6 @@ h6 {
 .title {
   margin: 0;
   font-size: 3em;
-  text-transform: uppercase;
   color: var(--primary-text);
   transition: color 300ms linear;
 }
@@ -115,7 +120,6 @@ h6 {
   position: absolute;
   bottom: -28px;
   cursor: pointer;
-  text-transform: uppercase;
 
   &:hover {
     @include floatingActionShadow(8px);
@@ -128,7 +132,6 @@ h6 {
   color: var(--subtitle-text);
   transition: color 300ms linear;
   cursor: pointer;
-  text-transform: uppercase;
 
   &:hover {
     color: #fff;
@@ -215,7 +218,6 @@ a {
 h2 {
   margin-top: 50px;
   margin-bottom: 25px;
-  text-transform: uppercase;
 }
 
 h3 {
@@ -236,6 +238,7 @@ strong {
 
 small {
   color: #757575;
+  font-weight: 300;
 }
 
 address {

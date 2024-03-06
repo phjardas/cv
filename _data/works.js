@@ -5,8 +5,16 @@ module.exports = [
     location: "Gelnhausen",
     from: "2023-03-01",
     description: {
-      de: ["TODO"],
-      en: ["TODO"],
+      de: [
+        "Technische Leitung eines Teams von 12 Software-Entwickler:innen. Planung, Architektur und Durchführung von Software-Projekten für Mittelstand und Konzerne.",
+        "Strategische Positionierung und Weiterentwicklung des Unternehmens im Bereich der Digitalisierung und Industrie 4.0.",
+        "Etablierung einer Standard-Architektur, vereinheitlichten Vorgehensweisen und begleitenden Software-Bibliotheken.",
+      ],
+      en: [
+        "Technical leadership of a team of 12 software developers. Planning, architecture and execution of software projects for medium-sized companies and corporations.",
+        "Strategic positioning and further development of the company in the field of digitalization and industry 4.0.",
+        "Implementation of a standard architecture, unified procedures and accompanying software libraries.",
+      ],
     },
     technologies: [
       "Kotlin",
@@ -27,8 +35,16 @@ module.exports = [
     location: "Hanau",
     from: "2019-11-01",
     description: {
-      de: ["TODO"],
-      en: ["TODO"],
+      de: [
+        "Mobile Einsatz-Unterstützung in Echtzeit für Feuerwehr und Rettungsdienste. Konzeption, Architektur und Implementierung von Features in enger Zusammenarbeit mit Stakeholdern und Kunden.",
+        "Hoch-performante, offline-fähige Progressive Web App für Android, iOS und den Desktop.",
+        "Schnittstellen-offene und hochverfügbare cloud-native Software-Architektur mit vollautomatisierter Continuous Delivery.",
+      ],
+      en: [
+        "Real-time mobile mission support for fire brigades and emergency services. Concept, architecture and implementation of features in close collaboration with stakeholders and customers.",
+        "High-performance, offline-capable progressive web app for Android, iOS and desktop.",
+        "Open interface and highly available cloud-native software architecture with fully automated continuous delivery.",
+      ],
     },
     technologies: [
       "Node.js",
@@ -37,7 +53,8 @@ module.exports = [
       "REST",
       "Microservices",
       "AWS",
-      "serverless",
+      "cloud-native",
+      "Firebase",
     ],
   },
   {
@@ -47,8 +64,14 @@ module.exports = [
     from: "2021-07-01",
     until: "2023-02-28",
     description: {
-      de: ["TODO"],
-      en: ["TODO"],
+      de: [
+        "Leitung eines agilen Teams von fünf Entwickler:innen in einem schnell wachsenden Startup. Konzeption, Architektur und Implementierung von Features in enger Zusammenarbeit mit Stakeholdern und Kunden.",
+        "Etablierung einer microservice-basierten cloud-native Software-Architektur und der vollautomatisierten Continuous Delivery.",
+      ],
+      en: [
+        "Leading an agile team of five developers in a fast-growing start-up. Concept, architecture and implementation of features in close collaboration with stakeholders and customers.",
+        "Establishment of a microservice-based cloud-native software architecture and fully automated continuous delivery.",
+      ],
     },
     technologies: [
       "Node.js",
