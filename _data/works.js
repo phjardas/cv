@@ -92,12 +92,12 @@ module.exports = [
     until: "2021-06-30",
     description: {
       de: [
-        "Senior-Architekt und Lead Developer in einer Gruppe von crossfunktionalen Teams mit insgesamt ca. 60 Personen. Entwicklung einer Verwaltungssoftware für das Land Berlin.",
-        "Ich habe die Niederlassung Rhein-Main gegründed und rekrutiere zur Zeit neue Mitarbeiterinnen und Mitarbeiter.",
+        "Senior-Architekt und Lead Developer in einer Gruppe von cross-funktionalen Teams mit insgesamt ca. 60 Personen. Entwicklung einer Verwaltungssoftware für das Land Berlin.",
+        "Gründung der Niederlassung Rhein-Main und Aufbau eines proefessionellen und effektiven Teams.",
       ],
       en: [
         "Senior architect and lead developer in a cross-functional group of teams with approx. 60 people involved in the development of an administrative software for the Berlin administration.",
-        "I've founded the Rhein-Main office in Hanau and am currently recruiting a team of talented professionals.",
+        "Founding of the Rhein-Main branch and building a professional and effective team.",
       ],
     },
     technologies: [
