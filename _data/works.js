@@ -1,36 +1,6 @@
 module.exports = [
   {
-    role: "Head of Development",
-    company: "romeis Information Engineering",
-    location: "Gelnhausen",
-    from: "2023-03-01",
-    description: {
-      de: [
-        "Technische Leitung eines Teams von 12 Software-Entwickler:innen. Planung, Architektur und Durchführung von Software-Projekten für Mittelstand und Konzerne.",
-        "Strategische Positionierung und Weiterentwicklung des Unternehmens im Bereich der Digitalisierung und Industrie 4.0.",
-        "Etablierung einer Standard-Architektur, vereinheitlichten Vorgehensweisen und begleitenden Software-Bibliotheken.",
-      ],
-      en: [
-        "Technical leadership of a team of 12 software developers. Planning, architecture and execution of software projects for medium-sized companies and corporations.",
-        "Strategic positioning and further development of the company in the field of digitalization and industry 4.0.",
-        "Implementation of a standard architecture, unified procedures and accompanying software libraries.",
-      ],
-    },
-    technologies: [
-      "Kotlin",
-      "Spring",
-      "React",
-      "TypeScript",
-      "REST",
-      "OAuth",
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Azure",
-    ],
-  },
-  {
-    role: "Lead Developer",
+    role: "Co-Founder, Lead Developer",
     company: "rescueTABLET",
     location: "Hanau",
     from: "2019-11-01",
@@ -55,6 +25,37 @@ module.exports = [
       "AWS",
       "cloud-native",
       "Firebase",
+    ],
+  },
+  {
+    role: "Head of Development",
+    company: "romeis Information Engineering",
+    location: "Gelnhausen",
+    from: "2023-03-01",
+    until: "2024-04-30",
+    description: {
+      de: [
+        "Technische Leitung eines Teams von 12 Software-Entwickler:innen. Planung, Architektur und Durchführung von Software-Projekten für Mittelstand und Konzerne.",
+        "Strategische Positionierung und Weiterentwicklung des Unternehmens im Bereich der Digitalisierung und Industrie 4.0.",
+        "Etablierung einer Standard-Architektur, vereinheitlichten Vorgehensweisen und begleitenden Software-Bibliotheken.",
+      ],
+      en: [
+        "Technical leadership of a team of 12 software developers. Planning, architecture and execution of software projects for medium-sized companies and corporations.",
+        "Strategic positioning and further development of the company in the field of digitalization and industry 4.0.",
+        "Implementation of a standard architecture, unified procedures and accompanying software libraries.",
+      ],
+    },
+    technologies: [
+      "Kotlin",
+      "Spring",
+      "React",
+      "TypeScript",
+      "REST",
+      "OAuth",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Azure",
     ],
   },
   {
