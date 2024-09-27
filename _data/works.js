@@ -95,10 +95,12 @@ module.exports = [
       de: [
         "Senior-Architekt und Lead Developer in einer Gruppe von cross-funktionalen Teams mit insgesamt ca. 60 Personen. Entwicklung einer Verwaltungssoftware für das Land Berlin.",
         "Gründung der Niederlassung Rhein-Main und Aufbau eines proefessionellen und effektiven Teams.",
+        "Die Schütze AG wurde 2020 von der Nortal Group gekauft und in Nortal AG umbenannt.",
       ],
       en: [
         "Senior architect and lead developer in a cross-functional group of teams with approx. 60 people involved in the development of an administrative software for the Berlin administration.",
         "Founding of the Rhein-Main branch and building a professional and effective team.",
+        "Schütze AG was acquired by Nortal Group in 2020 and renamed to Nortal AG.",
       ],
     },
     technologies: [
@@ -123,9 +125,11 @@ module.exports = [
     description: {
       de: [
         "Lead-Developer in einem Start-Up für die Entwicklung eines Online-Marktplatzes für Chemikalien.",
+        "Als dem Unternehmen das Geld ausging, mussten sie alle Mitarbeiter entlassen. Die beiden Gründer gründeten später Qualifyze und stellten mich erneut als Principal Developer ein.",
       ],
       en: [
         "Lead developer in a start-up developing a B2B marketplace for the sourcing of chemical ingredients.",
+        "The company ran out of money and had to lay off the whole staff. The two founders later founded Qualifyze and hired me again as Principal Developer.",
       ],
     },
     technologies: [
